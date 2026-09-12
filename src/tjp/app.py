@@ -164,3 +164,18 @@ def bt_history(market: str) -> dict:
 
     s = tape_series(market)
     return {"market": market, "points": len(s), "first": s[0] if s else None, "last": s[-1] if s else None}
+
+
+@app.get("/api/router/edges")
+def router_edges() -> dict:
+    from .router import edges, inference_edges
+
+    return {"edges": edges(), "inference": inference_edges()}
+
+
+@app.get("/api/minerinfo")
+def minerinfo() -> dict:
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parent.parent.parent
+    return {"doc": "docs/minerinfo.md", "theses": (base / "docs" / "minerinfo.md").read_text()[:3000]}

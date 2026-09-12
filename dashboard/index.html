@@ -43,6 +43,7 @@ input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#
 <section class="card"><h2>Catalyst calendar</h2><div id="cal"></div></section>
 <section class="card"><h2>Latest snapshot</h2><div id="snap"></div></section>
 <section class="card"><h2>Backtest</h2><div id="bt"></div></section>
+<section class="card"><h2>Mining — compute yield router</h2><div id="router"></div></section>
 </main>
 <script>
 let cur=null, curN=0;
@@ -94,6 +95,10 @@ async function extra(){
   document.getElementById('snap').innerHTML=s.ok?Object.entries(s.prices).slice(0,12).map(([k,v])=>`<p>${k}: $${v}</p>`).join('')+(s.n>12?`<p><small>+${s.n-12} more</small></p>`:''):'<p><small>no snapshot</small></p>';
   const r=await j('/api/backtest/report');
   document.getElementById('bt').innerHTML=`<p>${r.listings.length} listings tracked · cohort n=${r.cohort.n} <small>${r.note}</small></p>`;
+  const e=await j('/api/router/edges');
+  document.getElementById('router').innerHTML=
+    e.edges.map(x=>`<p>${x.workload} on ${x.hardware}: $${x.revenue_day}/d − $${x.cost_day} = <b>$${x.edge_day}/d</b></p>`).join('')+
+    e.inference.map(x=>`<p>${x.route}: <b>$${x.per_1usd} per $1</b></p>`).join('');
 }
 extra();
 init();
