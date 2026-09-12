@@ -1,8 +1,86 @@
 {
  "id": "1789129107118",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_Capacity_Displacement=2C_?=\n\t=?UTF-8?Q?Wafer_Handling=2C_UPW_=26_Physical_Truth_Bandwidth?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 Capacity Displacement, Wafer Handling, UPW & Physical Truth Bandwidth",
  "date": "Fri, 11 Sep 2026 07:14:50 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "Capacity-displacement alpha \u2014 HIGH",
+   "rating": null,
+   "falsifier": "rapid supply additions or demand destruction that",
+   "body": "1) Capacity-displacement alpha \u2014 HIGH *Thesis.* Model scarce industrial capacity as a conserved resource. When AI/HBM consumes more of it, other users can be rationed even if their own end-demand is flat. Fresh evidence is unusually clean. On 10 Sep Reuters reported Chinese AI accelerator prices rising 20\u201350% as HBM scarcity bites. Separately, consumer DRAM prices have risen sharply because suppliers are prioritizing AI memory, while mature-node foundries are seeing stronger pricing as global capacity is redirected toward AI-related products. SMIC reported 93.7% utilization and price increases; Samsung has raised some advanced foundry prices by up to 15%. *Kernel addition:* capacity_displacement_matrix[input, sector] and shadow_price_of_capacity. Every bottleneck should propagate both a positive demand edge to suppliers and a negative availability edge to competing consumers. *Tradable exposures:* Samsung, SK Hynix, Micron, SMIC; downstream victims can include low-margin hardware vendors whose bill of materials absorbs memory inflation. *Falsifier:* rapid supply additions or demand destruction that simultaneously normalize HBM and commodity DRAM/foundry pricing. Sources: - Reuters, 10 Sep 2026: https://www.reuters.com/world/asia-pacific/chinas-ai-chipmakers-raise-prices-high-bandwidth-memory-shortage-bites-2026-09-10/ - Reuters, 14 Aug 2026: https://www.reuters.com/world/china/chinese-chipmaker-smic-increases-prices-strong-ai-demand-2026-08-14/ - Reuters, 19 Aug 2026: https://www.reuters.com/business/autos-transportation/samsung-hikes-chipmaking-prices-by-up-15-demand-spike-sources-say-2026-08-19/"
+  },
+  {
+   "n": 2,
+   "title": "Wafer-handling robots as the hidden derivative of fab-tool expansion \u2014",
+   "rating": null,
+   "falsifier": "orders/backlog decouple from fab-tool growth or integrated",
+   "body": "2) Wafer-handling robots as the hidden derivative of fab-tool expansion \u2014 VERY HIGH TSMC said its required semiconductor equipment count has risen roughly *1.9x in six months*. The hidden consequence is not only more lithography/etch/deposition tools: every additional chamber creates more wafer transfers, FOUP moves, load-port cycles and contamination-sensitive handling. Rorze (6323.T) is a particularly interesting small/mid-cap expression. Its semiconductor-equipment orders reached a record \u00a542.0bn in the quarter to May, about *1.9x YoY*, with semiconductor backlog of \u00a562.3bn. It makes wafer-handling robots and cleanroom transport equipment rather than betting on one process architecture. This is a good example of a *cross-world necessity*: TSMC/Intel/Samsung, DRAM/NAND/logic, and many process-tool vendors all require automated wafer movement as fab complexity rises. *Kernel addition:* handling_intensity = process_steps \u00d7 wafer_moves_per_step \u00d7 automation_requirement. As node complexity and tool count increase, handling demand can grow faster than wafer starts. *Risk/crowding:* customer concentration is substantial; Applied Materials represented ~22% of quarterly sales in the cited period. Semiconductor capex remains cyclical. *Falsifier:* orders/backlog decouple from fab-tool growth or integrated tool architectures materially reduce inter-tool wafer movement. Sources: - TSMC equipment demand: https://www.tomshardware.com/tech-industry/semiconductors/tsmc-fab-equipment-demand-nearly-doubles-in-six-months-ai-surge-pushes-2026-capex-toward-usd64b-amid-tool-shortages - Rorze order data: https://tokyobrief.com/articles/rorze-q1-semiconductor-orders-customer-concentration"
+  },
+  {
+   "n": 3,
+   "title": "Ultrapure water is not an ESG footnote \u2014 it is process infrastructure \u2014",
+   "rating": null,
+   "falsifier": "semiconductor project cancellations, major reductions in water",
+   "body": "3) Ultrapure water is not an ESG footnote \u2014 it is process infrastructure \u2014 VERY HIGH As AI drives new leading-edge fabs, *ultrapure water (UPW)* scales with process intensity and yield requirements. Unlike generic water utilities, semiconductor UPW systems sit directly inside the manufacturing recipe and require specialized engineering, reclamation and contamination control. Three interesting exposures form a useful spectrum: - *Organo (6368.T):* TSMC-group revenue reached \u00a544.8bn in FY2026, ~25% of company revenue, nearly doubling year-on-year. Water Treatment Engineering orders were \u00a5141.7bn, +12.2% YoY, and the company is targeting much higher orders in FY2027. - *Nomura Micro Science (6254.T):* much smaller (~$0.8bn market cap in recent data). FY2026 was weak due to project timing, but management forecasts FY2027 sales +72.5% and orders +245.5%, making it a more convex but much riskier project-cycle exposure. - *Kurita Water (6370.T):* larger and steadier, with FY2026 orders +7.3%, sales +3.6%, business profit +12.7%. Veolia has also reported \u20ac343m of microelectronics bookings in 2026, including UPW and zero-liquid-discharge projects, confirming the category-level demand. *Kernel addition:* water_intensity_per_wafer, reclamation_requirement, local_water_permission, and UPW_qualification_depth. This is also a geography node: fab capacity can exist on paper while local water availability/reuse permissions bind deployment. *Falsifier:* semiconductor project cancellations, major reductions in water intensity per wafer, or commoditization that collapses engineering margins. Sources: - Organo: https://envalith.com/en/companies/6368/overview - Nomura Micro Science: https://japanir.jp/en/company/company-6254/ir/6254-20260514-01_wp_financial_summary/ - Kurita: https://japanir.jp/en/company/company-6370/ir/6370-20260514-02_wp_financial_summary/ - Veolia bookings: https://semiconductorindustrymonthly.com/veolia-secures-e343-million-in-semiconductor-bookings/"
+  },
+  {
+   "n": 4,
+   "title": "Package-level thermal interfaces become the next bottleneck after liquid",
+   "rating": null,
+   "falsifier": "package power density plateaus, conventional TIMs remain",
+   "body": "4) Package-level thermal interfaces become the next bottleneck after liquid cooling \u2014 HIGH, but investability is weaker Rack-level liquid cooling is becoming consensus. The more interesting derivative is what happens when rack cooling succeeds: heat density shifts down into the *die-to-lid interface*. IEEE packaging work published in 2026 describes TIMs as becoming system-level constraints as AI packages grow larger and warpage approaches the nominal thickness of the interface layer. TSMC and others are moving toward microfluidic/direct-backside cooling precisely because the traditional interface is becoming material. Coherent launched *bondable diamond* thermal-management products in Jan 2026 for direct bonding to Si, SiC, GaN, GaAs and InP. Diamond can bypass some interface resistance, making this a plausible long-duration option on extreme power density. *Kernel addition:* thermal_resistance_budget and bottleneck_shift_after_cooling. When facility cooling capacity improves, recompute which thermal layer becomes marginal rather than assuming the bottleneck disappears. *Tradable exposure:* COHR is the cleanest public name found, but it is already heavily rerated on AI optics, so this thermal optionality is not a standalone valuation case. *Falsifier:* package power density plateaus, conventional TIMs remain adequate, or direct-backside cooling bypasses the merchant-material layer entirely. Sources: - IEEE TIM paper: https://eps.ieee.org/wp-content/uploads/2026/03/M-and-P-TC-Thermal-Interface-Materials-TIM-Strategy-for-Thermal-Management-in-AI-and-HPC-Applications-2026-IEEE-EPS-Newsletter_Final_YL2.pdf - Coherent bondable diamond: https://www.nasdaq.com/press-release/coherent-expands-thermal-management-portfolio-high-performance-bondable-diamond"
+  },
+  {
+   "n": 5,
+   "title": "\u2018Physical truth bandwidth\u2019 may be the real humanoid-robotics moat \u2014 HIGH",
+   "rating": null,
+   "falsifier": "vision/proprioception alone reaches human-level contact",
+   "body": "5) \u2018Physical truth bandwidth\u2019 may be the real humanoid-robotics moat \u2014 HIGH conceptual alpha, LOW current public investability 2026 robotics papers increasingly converge on the same limitation: vision-language-action models can imitate trajectories, but contact-rich dexterity needs *high-frequency tactile/force data from reality*. - DexViTac collected synchronized vision+tactile+kinematic demonstrations and reports >85% success on difficult contact-rich tasks. - T-Rex explicitly argues that modern VLAs largely neglect tactile information because of data scarcity and architectural limitations; its tactile-reactive system improved average success by >30% over strong baselines. - SBLR shows that sensor-specific simulation itself is a bottleneck, using real random-play tactile data to bridge the sim-to-real gap. This suggests a new post-AGI scarcity primitive: physical_truth_bandwidth = rate \u00d7 dimensionality \u00d7 fidelity \u00d7 synchronization \u00d7 diversity of real sensor observations. As robot-policy generation gets cheaper, the scarce asset may be fleets/instruments that continuously generate trusted contact data. This is the robotics analogue of proprietary negative-data moats in autonomous labs. *Tradable exposure:* no clean public tactile-data pure-play surfaced. Harmonic Drive Systems (6324.T) has meaningful humanoid actuator exposure, but it is an actuator/reducer play rather than the tactile-data layer itself. This is therefore a *watch-for-emerging-public-supplier* theme rather than a current buy call. *Falsifier:* vision/proprioception alone reaches human-level contact manipulation, or synthetic tactile simulation closes the reality gap cheaply enough that real contact data loses scarcity value. Sources: - DexViTac: https://arxiv.org/abs/2603.17851 - TactiDex: https://arxiv.org/abs/2607.09190 - SBLR: https://arxiv.org/abs/2608.15897"
+  },
+  {
+   "n": 6,
+   "title": "New meta-factor: cheapest indispensable component / project value \u2014 HIGH",
+   "rating": null,
+   "falsifier": null,
+   "body": "6) New meta-factor: cheapest indispensable component / project value \u2014 HIGH Several recent bottlenecks share the same economic geometry: a low-cost component gates an enormous downstream asset. - $40m of switchgear can delay a multi-billion-dollar data center. - wafer-handling equipment is tiny relative to fab value but required for production. - UPW systems are a small fraction of fab capex but no wafer can run without qualified water. - thermal interfaces cost almost nothing relative to an accelerator but constrain usable power. Define: gating_leverage = downstream_asset_value / component_cost \u00d7 time_to_replace \u00d7 qualification_depth. This may be a better alpha screen than TAM. We want businesses selling *small-ticket, hard-to-substitute, schedule-critical inputs* into huge capital pools. Their customers care more about availability/reliability than price, which creates abnormal pricing power before the market notices the component category. Highest-priority names from this pass"
+  },
+  {
+   "n": 1,
+   "title": "*Rorze (6323.T)* \u2014 strongest new cross-world derivative; wafer",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. *Rorze (6323.T)* \u2014 strongest new cross-world derivative; wafer handling grows with tool/process intensity."
+  },
+  {
+   "n": 2,
+   "title": "*Nomura Micro Science (6254.T)* \u2014 smallest/most convex UPW exposure",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. *Nomura Micro Science (6254.T)* \u2014 smallest/most convex UPW exposure but high project timing risk."
+  },
+  {
+   "n": 3,
+   "title": "*Organo (6368.T)* \u2014 cleaner operating evidence and direct TSMC",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. *Organo (6368.T)* \u2014 cleaner operating evidence and direct TSMC exposure, less convex."
+  },
+  {
+   "n": 4,
+   "title": "*Kurita Water (6370.T)* \u2014 broader, steadier version of the same",
+   "rating": null,
+   "falsifier": null,
+   "body": "4. *Kurita Water (6370.T)* \u2014 broader, steadier version of the same UPW/reclamation thesis."
+  },
+  {
+   "n": 5,
+   "title": "*Coherent (COHR)* \u2014 thermal-interface optionality is real but",
+   "rating": null,
+   "falsifier": null,
+   "body": "5. *Coherent (COHR)* \u2014 thermal-interface optionality is real but AI-optics crowding means it is not hidden alpha anymore. Kernel changes worth implementing Add five primitives: capacity_displacement_matrix, shadow_price_of_capacity, handling_intensity, physical_truth_bandwidth, and gating_leverage. The most important is *capacity displacement*. The world-state graph should treat scarce capacity as a budget. If AI consumes more HBM wafers, electrical equipment slots, optical preforms, fab tools, water-treatment engineers, or high-purity material capacity, the model must automatically ask *who gets less of it and what becomes more valuable as a consequence?* That is where the cleanest third-order alpha from this run appears to lie."
+  }
+ ]
 }

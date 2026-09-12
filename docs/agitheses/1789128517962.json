@@ -1,8 +1,79 @@
 {
  "id": "1789128517962",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_Interface_Chemistry=2C_Va?=\n\t=?UTF-8?Q?cuum_Content_=26_Dopant_Scarcity?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 Interface Chemistry, Vacuum Content & Dopant Scarcity",
  "date": "Fri, 11 Sep 2026 07:14:44 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "INTERFACE-CHEMISTRY DENSITY \u2014 hidden consumables scale faster than",
+   "rating": null,
+   "falsifier": "glass-core/direct-bonding architectures eliminate relevant",
+   "body": "1. INTERFACE-CHEMISTRY DENSITY \u2014 hidden consumables scale faster than package count The best new small-cap exposure this run is MEC Company (TSE:4971). MEC\u2019s CZ-series chemistry prepares copper surfaces so resin layers adhere reliably inside semiconductor package substrates. The key point is not merely that AI packaging demand is rising: MEC states that as package substrates become larger and adopt more layers, the amount of CZ chemistry used increases. That gives us a new primitive: interface_density \u2014 the number/area of critical material interfaces that must be chemically conditioned per package. This is a cleaner second derivative on chiplet/HBM/CoWoS complexity than substrate unit volumes alone. MEC says CZ is ~60% of chemical sales and is widely adopted by package-substrate makers; Q1 CZ sales rose 41.4% YoY to a quarterly record, while H1 company operating profit rose 69.4% YoY. Current market cap is ~\u00a5114B and forward P/E ~16.7x after a major rerating, so it is no longer undiscovered, but valuation is still radically different from many headline AI-equipment names. Why it matters: AI raises package area, layer count, thermal cycling, wiring density and reliability requirements simultaneously. Tiny interface treatments can therefore gain content per device even if semiconductor unit growth is modest. Falsifiers: glass-core/direct-bonding architectures eliminate relevant copper-resin interfaces faster than MEC adapts; advanced packaging demand shifts toward processes where CZ content/package falls; customer concentration or chemistry substitution compresses pricing. Sources: https://www.mec-co.com/en/ir/investors/business/ https://www.mec-co.com/en/ir/library/pdf/setsumeikai/5801_e.pdf https://www.mec-co.com/en/ir/library/pdf/report/5801.pdf"
+  },
+  {
+   "n": 1,
+   "title": "VACUUM-CONTENT INFLATION \u2014 process-step complexity may matter more",
+   "rating": null,
+   "falsifier": "tool architectures consolidate chambers/process steps; valve",
+   "body": "1. VACUUM-CONTENT INFLATION \u2014 process-step complexity may matter more than wafers VAT Group\u2019s H1 2026 semiconductor-valve orders rose 99% YoY while semiconductor sales fell 13%, pushing valve backlog up 127% YoY. The striking part is the divergence between orders and delivered sales: fabs/toolmakers are reserving vacuum hardware well ahead of revenue realization. VAT added >700 employees in H1 and is trying to push quarterly output above CHF450M. New thesis variable: vacuum_content_per_wafer. More ALD/ALE, selective etch, deposition, cleaning and advanced memory layers can increase the number/value of vacuum-controlled process steps per wafer even without equivalent wafer-volume growth. This is another complexity-density effect analogous to timing-content and measurement-density inflation. Caveat: VAT is already expensive; recent valuation screens put forward P/E around 37x and TTM metrics much higher. Better alpha may lie one layer below VAT in elastomers, seals, precision-machined valve parts, coatings and service consumables. Falsifiers: tool architectures consolidate chambers/process steps; valve reuse/service intervals lengthen; the current order surge proves mostly inventory prebuild rather than sustained process-content growth. Sources: https://www.vatgroup.com/investor-relations/annual-report/group-results https://ayondo.com/en/news/CH0311864901/vat-group-ag/vat-media-release-on-half-year-2026-results-2369620"
+  },
+  {
+   "n": 1,
+   "title": "DOPANT SCARCITY \u2014 the fiber bottleneck has an upstream chemistry layer",
+   "rating": null,
+   "falsifier": "fiber designs materially reduce Ge loading, alternative dopants",
+   "body": "1. DOPANT SCARCITY \u2014 the fiber bottleneck has an upstream chemistry layer The optical-fiber boom is becoming obvious, but the less-discussed upstream constraint is germanium tetrachloride, the ultra-high-purity dopant used to raise the refractive index of silica fiber cores. China remains dominant in germanium production and export controls create geopolitical optionality. The investment implication is that AI optics can pull on a tiny critical-mineral stream whose supply is largely a by-product of other mining/refining activity. New kernel primitive: byproduct_dopant_elasticity = incremental qualified dopant supply / incremental end-market demand. When this is low, a small optical-fiber demand shock can produce nonlinear pricing. Potential exposures: Teck and Umicore are real non-Chinese germanium sources, but both are diversified; the higher-alpha task is to identify smaller refiners/recyclers capable of producing optical-grade GeCl4 rather than merely owning germanium-bearing feedstock. Falsifiers: fiber designs materially reduce Ge loading, alternative dopants gain qualification, recycling expands rapidly, or Chinese export controls normalize enough to remove scarcity rents. Sources: https://www.reuters.com/business/media-telecom/verizon-signs-optical-fiber-deal-with-corning-expand-broadband-support-ai-growth-2026-09-08/ https://introl.com/uk/blog/germanium-chokepoint-china-fiber-optic-supply-chain-2026"
+  },
+  {
+   "n": 1,
+   "title": "EMBEDDED-UTILITY TOLL ROADS \u2014 gases are capacity rights, not",
+   "rating": null,
+   "falsifier": "fabs aggressively insource gases; commoditization/supplier",
+   "body": "1. EMBEDDED-UTILITY TOLL ROADS \u2014 gases are capacity rights, not commodities Air Liquide\u2019s April 2026 decision to invest \u20ac200M in two Japanese ultra-high-purity gas units under a long-term semiconductor customer agreement illustrates a useful distinction: advanced fabs do not simply buy commodity nitrogen/argon/oxygen. They rely on qualified, site-specific, continuously available gas infrastructure that is often financed and operated under long-term contracts. Air Products likewise disclosed new Samsung wins involving owned/operated production facilities and bulk specialty-gas systems. The hidden asset is therefore not gas itself but embedded qualified utility capacity sitting physically beside a fab. New variable: utility_lock_in = qualification_cost \u00d7 switching_downtime \u00d7 onsite_asset_specificity \u00d7 contract_duration. This has lower equity convexity in Air Liquide/Air Products because they are enormous diversified businesses. Better rabbit hole: Japanese specialty-gas producers such as Kanto Denka Kogyo, Nippon Sanso, Resonac and smaller purifier/abatement suppliers. Falsifiers: fabs aggressively insource gases; commoditization/supplier competition removes pricing power; semiconductor capacity additions underperform announced plans. Sources: https://www.reuters.com/business/energy/air-liquide-invest-236-million-japan-support-next-generation-ai-chip-production-2026-04-16/ https://www.nasdaq.com/press-release/air-products-reports-fiscal-2026-second-quarter-results-2026-04-30"
+  },
+  {
+   "n": 1,
+   "title": "PURE-MATERIAL READINESS \u2014 Toyo Gosei shows a different kind of",
+   "rating": null,
+   "falsifier": "qualification slips, utilization remains low, customer",
+   "body": "1. PURE-MATERIAL READINESS \u2014 Toyo Gosei shows a different kind of qualification debt Toyo Gosei (TSE:4970) has expanded cutting-edge photosensitive-material capacity to 1.8x and semiconductor high-purity-solvent shipping capacity to ~3x. Management explicitly says semiconductor innovation is now moving so quickly that when customers ask for a new material there is no longer time to develop the underlying technology from scratch; capacity and R&D must exist in advance. That is direct evidence for our qualification-debt thesis: suppliers must spend before demand is contractually certain because customer innovation cycles are shorter than chemical qualification/build cycles. The stock is small (~\u00a584B market cap) but has roughly doubled in value over the past year and remains operationally volatile; recent TTM earnings were negative despite long-term AI-linked materials demand. New signal: prequalification_capex_ratio = capacity/R&D committed before customer production qualification divided by current revenue. High values can identify both convex future winners and dangerous stranded-capital situations. Falsifiers: qualification slips, utilization remains low, customer architectures change before the new lines fill, or fixed-cost absorption overwhelms volume growth. Sources: https://www.toyogosei.co.jp/english/sustainability/message.html https://www.toyogosei.co.jp/english/company/index.html RANKING THIS RUN"
+  },
+  {
+   "n": 1,
+   "title": "MEC / interface-chemistry density \u2014 9.2/10",
+   "rating": 9.2,
+   "falsifier": null,
+   "body": "1. MEC / interface-chemistry density \u2014 9.2/10"
+  },
+  {
+   "n": 2,
+   "title": "Vacuum-content inflation \u2014 8.7/10 thesis, lower current valuation",
+   "rating": 8.7,
+   "falsifier": null,
+   "body": "2. Vacuum-content inflation \u2014 8.7/10 thesis, lower current valuation alpha in VAT itself"
+  },
+  {
+   "n": 3,
+   "title": "Germanium/GeCl4 dopant scarcity \u2014 8.6/10",
+   "rating": 8.6,
+   "falsifier": null,
+   "body": "3. Germanium/GeCl4 dopant scarcity \u2014 8.6/10"
+  },
+  {
+   "n": 4,
+   "title": "Embedded ultra-high-purity utility capacity \u2014 8.3/10",
+   "rating": 8.3,
+   "falsifier": null,
+   "body": "4. Embedded ultra-high-purity utility capacity \u2014 8.3/10"
+  },
+  {
+   "n": 5,
+   "title": "Prequalification-capex / Toyo Gosei \u2014 8.1/10",
+   "rating": 8.1,
+   "falsifier": null,
+   "body": "5. Prequalification-capex / Toyo Gosei \u2014 8.1/10 Most important kernel additions: - interface_density - chemistry_content_per_package - vacuum_content_per_wafer - byproduct_dopant_elasticity - utility_lock_in - prequalification_capex_ratio The strongest conceptual upgrade is CONTENT INTENSITY. We have now seen the same pattern independently in timing, measurement, vacuum and package chemistry: as AI hardware gets more complex, the value or quantity of obscure enabling inputs per unit can rise faster than headline system volumes. The kernel should therefore model d(content/unit)/dt for every physical input, not only end-market demand growth. Next rabbit hole: decompose MEC/VAT one layer further into qualified raw chemicals, elastomers/seals, precision coatings and abatement components where public-market awareness is even lower."
+  }
+ ]
 }

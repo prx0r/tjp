@@ -1,8 +1,44 @@
 {
  "id": "1789127941067",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_InP_crystal_growth=2C_ind?=\n\t=?UTF-8?Q?ium_optionality_=26_measurement_density?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 InP crystal growth, indium optionality & measurement density",
  "date": "Fri, 11 Sep 2026 07:35:49 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "InP crystal-growth equipment may be a better bottleneck than InP",
+   "rating": null,
+   "falsifier": "InP is displaced rapidly by silicon photonics/external laser",
+   "body": "1. InP crystal-growth equipment may be a better bottleneck than InP epitaxy itself The AI-optics thesis has moved one layer upstream. Recent industry reporting estimates 2026 effective InP substrate capacity at only ~0.6\u20130.75M wafers versus ~2.6\u20133.0M wafers of demand, with 2-inch optical-grade substrate prices rising from about $800 in 2025 to roughly $2,300\u20132,500 by April 2026. Large-diameter crystal growth is difficult, yields take years to improve, and customer qualification adds latency. PVA TePla (ETR:TPE) is particularly interesting because it sells the VGF crystal-growth equipment used for 4\u20136 inch GaAs/InP crystals. Its Q1 2026 order intake rose 164% YoY to \u20ac121.6M, and management explicitly identified initial equipment orders for InP crystal production tied to AI data centers. H1 reporting later showed \u20ac186.7M order intake (+80%), including InP crystal-growth systems and HBM ultrasonic metrology. Why this may be alpha: the market sees \u201coptics demand\u201d; the scarcer economic node may be the equipment that expands qualified bulk-substrate capacity. This is picks-and-shovels beneath the picks-and-shovels. Falsifiers: InP is displaced rapidly by silicon photonics/external laser architectures that materially reduce InP consumption; 6-inch yields ramp much faster than expected; Chinese equipment vendors commoditize VGF systems; PVA\u2019s orders fail to convert into revenue/margin. Sources: https://www.pvatepla.com/corporate/investorrelations/financial-news/pva-tepla-off-to-a-strong-start-to-the-year/ https://www.pvatepla.com/products-technologies/crystal-growth/vertical-gradient-freeze/kronos/ https://en.etnews.com/20260708200006 https://www.trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck/"
+  },
+  {
+   "n": 1,
+   "title": "Non-Chinese indium recovery is becoming strategic optionality",
+   "rating": null,
+   "falsifier": "Chinese export friction eases; optical architectures materially",
+   "body": "1. Non-Chinese indium recovery is becoming strategic optionality China produces roughly 70% of global indium and has tightened scrutiny around indium/InP exports. Reuters reported in June that InP had already been placed under Chinese export controls and that the U.S. Defense Logistics Agency is preparing to stockpile up to 403 tons of indium over three years. Korea Zinc (KRX:010130) may be a hidden exposure. It is Korea\u2019s only domestic indium producer and reportedly produces around 90\u2013100 tons annually. In Q2 2026 it increased indium sales volume 51% QoQ while prices had roughly doubled from the prior year; indium\u2019s share of its rare-metals revenue more than doubled. The company is also considering moving downstream into indium compounds for data-center customers. The deeper thesis is supply elasticity: indium is largely a by-product of zinc refining, so price cannot summon new primary mine output quickly. A recycler/smelter with proprietary recovery technology can therefore own convex optionality without needing to predict which laser vendor wins. Falsifiers: Chinese export friction eases; optical architectures materially reduce indium intensity; zinc-smelting byproduct recovery scales quickly elsewhere; indium prices collapse as inventories normalize. Sources: https://www.reuters.com/world/china/china-tightens-indium-export-checks-ai-demand-increases-2026-06-19/ https://en.sedaily.com/finance/2026/08/17/korea-zinc-cashes-in-on-indium-price-surge-driven-by-ai https://www.reuters.com/world/asia-pacific/korea-zinc-talks-with-us-tech-firms-extract-rare-earths-data-centre-waste-2026-03-12/"
+  },
+  {
+   "n": 1,
+   "title": "\u201cMeasurement density\u201d may rise faster than wafer starts",
+   "rating": null,
+   "falsifier": "integrated tool vendors internalize sensing; process",
+   "body": "1. \u201cMeasurement density\u201d may rise faster than wafer starts INFICON (SIX:IFCN) is a useful test case for a broader factor: as semiconductor process windows narrow and tools become more complex, the number/value of measurements required per manufacturing step rises. This can create growth even without proportional wafer-volume growth. INFICON\u2019s Q2 2026 sales reached a record $198.1M (+18.3% YoY); H1 Semiconductor & Vacuum Coating revenue rose 27.2%. Order intake hit an all-time high, and management raised FY2026 guidance to $750\u2013780M revenue with a 19\u201320% operating margin. The company cites leading-edge logic, HBM, data-center infrastructure and increased sensor usage at advanced nodes as drivers. The concept to add to the kernel is Measurement Density = measurements / process step \u00d7 process steps / device \u00d7 devices produced. If AI hardware complexity increases the first two terms, metrology/process-control suppliers can outgrow the underlying wafer market. Falsifiers: integrated tool vendors internalize sensing; process simplification offsets node complexity; Chinese sensor substitutes compress pricing; semiconductor capex turns before measurement intensity rises. Sources: https://www.inficon.com/en/news/inficon-delivers-record-second-quarter-2026-and-raises-full-year-guidance"
+  },
+  {
+   "n": 1,
+   "title": "High-vacuum infrastructure is a cross-world necessity, but",
+   "rating": null,
+   "falsifier": "tool architecture consolidates vacuum subsystems; fab-capex",
+   "body": "1. High-vacuum infrastructure is a cross-world necessity, but crowdedness matters VAT Group\u2019s Q1 2026 semiconductor valve orders rose 64.5% YoY and backlog rose 24.9%. VAT explicitly says AI-driven fab expansion, leading-edge logic and HBM are underpinning a structural equipment cycle, with more than 110 fabs under construction globally. This is less obscure than PVA/INFICON, so the alpha may be in second-tier or component suppliers rather than VAT itself. But the kernel should treat ultra-high-vacuum integrity as a cross-world necessity across advanced semiconductors, quantum systems, thin-film optics and scientific instrumentation. Useful feature: Vacuum Criticality = vacuum steps \u00d7 contamination sensitivity \u00d7 downtime cost \u00d7 leak-detection intensity. Falsifiers: tool architecture consolidates vacuum subsystems; fab-capex cycle rolls over; local Chinese vacuum suppliers take high-end share faster than expected. Sources: https://www.vatgroup.com/news/medienmitteilung-zum-lagebericht-q1-2026 https://www.vatgroup.com/investor-relations/annual-report/outlook"
+  },
+  {
+   "n": 1,
+   "title": "Humanoid robotics may already be migrating from reducer scarcity to",
+   "rating": null,
+   "falsifier": "humanoid unit volumes remain mostly pilot-scale; direct-drive",
+   "body": "1. Humanoid robotics may already be migrating from reducer scarcity to precision-machining/measurement scarcity The obvious trade is harmonic/RV reducers. The less obvious derivative is what constrains reducer capacity expansion: ultra-precision grinding, encoder gratings, bearings, metrology and force-torque sensor manufacturing. Industry reporting shows reducer orders booked into 2027 while Chinese localization is already increasing quickly, implying that simply owning reducer makers risks being late to the bottleneck. The research direction should therefore be: reducer demand -> capacity additions -> precision-machine-tool and inspection demand. This is exactly the bottleneck-derivative framework: find what becomes scarce when today\u2019s shortage is successfully addressed. Falsifiers: humanoid unit volumes remain mostly pilot-scale; direct-drive actuators reduce reducer intensity; China overbuilds component capacity and destroys margins before machine-tool suppliers monetize the cycle. Source: https://www.geyontech.com/tech-library/62/ Kernel additions from this run - bulk_crystal_growth_capacity - qualification_latency_by_wafer_diameter - byproduct_supply_elasticity - non_china_supply_share - measurement_density - vacuum_criticality - bottleneck_derivative_score - capacity_expansion_enabler Highest-priority names for deeper valuation work: PVA TePla first; INFICON second; Korea Zinc as a strategic-material optionality case; then search globally for smaller suppliers to PVA/InP crystal-growth lines and INFICON/VAT-adjacent vacuum/process-control components. This memo is research, not investment advice."
+  }
+ ]
 }

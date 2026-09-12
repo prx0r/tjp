@@ -1,8 +1,79 @@
 {
  "id": "1789129447197",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_InP=2C_Capacity_Rights=2C_G?=\n\t=?UTF-8?Q?as_Turbines_=26_Glass_TGV?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 InP, Capacity Rights, Gas Turbines & Glass TGV",
  "date": "Fri, 11 Sep 2026 07:15:05 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 2,
+   "title": "\u201cCapacity reservation rights\u201d should become a first-class asset in the",
+   "rating": null,
+   "falsifier": "reservation markets become liquid/transferable and fully",
+   "body": "2) \u201cCapacity reservation rights\u201d should become a first-class asset in the kernel The recurring pattern across AI infrastructure is no longer simple ownership of hardware. Nvidia\u2019s Coherent deal explicitly includes *future access and capacity rights*. Data-centre developers are reserving grid positions, turbine slots and equipment years in advance. Reuters reported this week that creditors are becoming stricter about AI-infrastructure projects, increasingly requiring permits and leases before funding; delays from electricity access, supply chains and local opposition are becoming credit variables. *New kernel variable:* DeliverableCapacity = AnnouncedCapacity \u00d7 P(site control) \u00d7 P(power) \u00d7 P(equipment slot) \u00d7 P(permitting) \u00d7 P(financing) Then value the *rights* to each scarce slot. Two developers with identical announced MW can have radically different real option value. *Alpha implication:* company disclosures about queue positions, deposits, site control, long-lead purchase agreements and reservation contracts can be scraped and scored before headline capacity numbers are discounted by the market. *Falsifier:* reservation markets become liquid/transferable and fully priced, or supply expands fast enough that slot scarcity disappears. Source: Reuters, 8 Sep 2026: https://www.reuters.com/commentary/breakingviews/ai-construction-crunch-widens-credit-fault-lines-2026-09-08/"
+  },
+  {
+   "n": 3,
+   "title": "AI power bottleneck is migrating from the grid to rotating metal",
+   "rating": null,
+   "falsifier": "data centres pivot decisively to batteries/fuel",
+   "body": "3) AI power bottleneck is migrating from the grid to rotating metal A less-obvious second derivative of grid scarcity is *onsite generation*. As developers try to bypass multi-year interconnection queues, gas turbines themselves become scarce. Current industry reporting points to multi-year turbine backlogs. Even more interesting: Reuters reported on 9 Sep that Howmet is seeing additional turbine-component demand from AI-powered data centres while struggling with the scale of capital expansion needed to satisfy aerospace + turbine demand. This creates a cross-world node: *precision castings / superalloy turbine components* benefit from both aviation and incremental onsite power generation. GE Aerospace\u2019s $12B acquisition of CPP to secure casting capacity is powerful revealed-preference evidence that these manufacturing processes are genuinely difficult to scale. *Candidate exposure:* Howmet Aerospace is not obscure or cheap, but the underlying rabbit hole is smaller casting/forging/superalloy/process-equipment suppliers that sit beneath both aerospace and power turbines. *Falsifiers:* data centres pivot decisively to batteries/fuel cells/nuclear/grid power; turbine OEM capacity ramps faster than component supply; AI datacentre developers reject gas for permitting/emissions reasons. Sources: https://www.reuters.com/legal/transactional/howmet-ceo-fine-with-ge-aerospace-deal-working-meet-demand-engine-parts-2026-09-09/ ; https://www.reuters.com/business/aerospace-defense/ge-aerospace-bets-black-art-casting-secure-jet-engine-supply-2026-09-09/"
+  },
+  {
+   "n": 4,
+   "title": "Glass-core packaging: thickness/warpage may create an equipment",
+   "rating": 9.0,
+   "falsifier": "organic substrates improve enough; glass adoption slips",
+   "body": "4) Glass-core packaging: thickness/warpage may create an equipment transition before glass becomes mainstream Today, 10 Sep 2026, Philoptics (161580.KQ) showed 2.0mm-thick, 510\u00d7515mm glass substrates with claimed zero-defect TGV machining and said several overseas customers had completed technical validation. The reason thicker glass is becoming relevant is itself causal: AI packages are getting physically larger as more GPUs/HBM are integrated, which worsens warpage; thicker glass increases stiffness. *Alpha chain:* larger AI package \u2192 warpage problem \u2192 thicker glass cores \u2192 harder TGV drilling \u2192 premium on laser process/yield \u2192 equipment winners This is a good example of a *third-order bottleneck*: not \u201cglass substrates,\u201d but *reliable high-aspect-ratio TGV processing on thicker/larger panels*. *Candidates:* Philoptics, LPKF, EO Technics; monitor actual production-tool orders rather than demos. This could become highly convex if glass-core adoption crosses from pilot to volume. *Falsifiers:* organic substrates improve enough; glass adoption slips beyond 2028; multiple laser vendors commoditize drilling; customer validation never becomes production orders. Sources: https://en.sedaily.com/finance/2026/09/10/philoptics-shows-zero-defect-glass-drilling-on-2mm ; https://view.asiae.co.kr/en/article/2026090710053387061"
+  },
+  {
+   "n": 5,
+   "title": "Autonomous science may create a *coordination bottleneck*, not just an",
+   "rating": null,
+   "falsifier": "labs remain bespoke enough that orchestration never",
+   "body": "5) Autonomous science may create a *coordination bottleneck*, not just an instrument bottleneck A July 2026 arXiv paper explicitly frames the *validation bottleneck* in self-driving labs and attacks two constraints: too many experimental rounds and high cost per experiment. Another March 2026 paper shows mobile robot chemists can lose throughput simply waiting for humans to access shared instruments. This suggests a deeper scarcity migration: AI hypothesis abundance \u2192 instrument scarcity \u2192 lab scheduling/robot logistics scarcity \u2192 orchestration layer So the winner may not only be Thermo Fisher/Bruker/Tecan-type instrument vendors. There may be a new software/control market for *lab-wide schedulers that price instrument time, route samples and decide high-resolution vs surrogate measurements*. This is analogous to GPU cluster schedulers, but for atoms. *Tradable angle today:* instrument vendors with open automation APIs and robot-compatible workflows may gain share because autonomous labs optimize around interoperability. The really convex exposure may still be private/too early. *Falsifier:* labs remain bespoke enough that orchestration never standardizes, or vendors vertically integrate the scheduler into their own ecosystems. Sources: https://arxiv.org/abs/2607.04508 ; https://arxiv.org/abs/2603.08420 ; https://arxiv.org/abs/2604.03286"
+  },
+  {
+   "n": 6,
+   "title": "Strategic-complementarity feedback can create adoption avalanches",
+   "rating": null,
+   "falsifier": "intentions fail to become orders, ROI remains poor, or",
+   "body": "6) Strategic-complementarity feedback can create adoption avalanches The August 2026 revision of the NBER \u201cInnovation Race\u201d experiment is more important than it first looked. ~3,000 firms systematically underestimated competitors\u2019 AI/robotics adoption. When informed, firms revised beliefs and increased intended robotics adoption; a 1 percentage point increase in expected competitor adoption raised intended robotics adoption by 0.732 pp. That means AI adoption can be *self-exciting*: competitor adoption \u2192 belief update \u2192 own adoption \u2192 competitor belief update \u2192 \u2026 This is an endogenous threshold mechanism. Once observed adoption crosses a visibility threshold, capex can accelerate much faster than smooth diffusion curves predict. *Alpha signal:* monitor not just adoption itself, but *visibility of adoption*: earnings-call mentions of competitor automation, trade-show deployments, job postings, factory tours, public robot deployments. The market may model unit demand smoothly while real demand jumps after competitive panic. *Potential beneficiaries:* robotics component suppliers with bottleneck capacity; industrial automation; machine vision; precision reducers/encoders/force-torque sensors. *Falsifier:* intentions fail to become orders, ROI remains poor, or component architectures commoditize. Source: https://www.nber.org/papers/w34532 Highest-priority additions to the kernel from this run"
+  },
+  {
+   "n": 1,
+   "title": "*Capacity-rights graph:* equipment slots, queue position, permits,",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. *Capacity-rights graph:* equipment slots, queue position, permits, site control, deposits, reservation contracts."
+  },
+  {
+   "n": 2,
+   "title": "*Deliverable-vs-announced capacity score:* discount every MW/fab/tool",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. *Deliverable-vs-announced capacity score:* discount every MW/fab/tool pipeline by implementation probability."
+  },
+  {
+   "n": 3,
+   "title": "*Upstream qualification bottleneck detector:* look for phrases like",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. *Upstream qualification bottleneck detector:* look for phrases like \u201ccapacity conversion,\u201d \u201ccustomer qualification,\u201d \u201callocation,\u201d \u201clong-term supply agreement,\u201d especially in tiny upstream suppliers."
+  },
+  {
+   "n": 4,
+   "title": "*Bottleneck derivative:* when current bottleneck is relieved,",
+   "rating": null,
+   "falsifier": null,
+   "body": "4. *Bottleneck derivative:* when current bottleneck is relieved, automatically walk one edge downstream/upstream to find what breaks next."
+  },
+  {
+   "n": 5,
+   "title": "*Adoption avalanche model:* make competitor-visible adoption increase",
+   "rating": null,
+   "falsifier": null,
+   "body": "5. *Adoption avalanche model:* make competitor-visible adoption increase the hazard rate of industry-wide adoption rather than keeping diffusion exogenous. Current best rabbit hole from this run *IQE / InP epitaxy* is the one I would investigate next. It has the desired shape: a small public company, an upstream layer that multiple optical architectures need, direct fresh evidence of >40% revenue growth and capacity conversion, multi-year customer agreements, and a potential shift from niche compound-semiconductor supplier to constrained AI-infrastructure input. It is not yet enough to call it a buy: we need current valuation, customer concentration, real InP capacity share, incremental gross margin, capex required per wafer, competitor capacity (Coherent/II-VI ecosystem, Sumitomo, AXT etc.), and architecture substitution risk."
+  }
+ ]
 }

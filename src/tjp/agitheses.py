@@ -5,13 +5,16 @@ import json
 import re
 from pathlib import Path
 
-HEAD_RE = re.compile(r"^(\d+)\.\s+(.+)$", re.M)
+HEAD_RE = re.compile(r"^\s*(\d+)[.)]\s+(.+)$", re.M)
 RATE_RE = re.compile(r"(\d+(?:\.\d+)?)/10")
+FALS_RE = re.compile(r"^\s*\*?Falsifiers?:\*?\s*(.+)$", re.M | re.I)
 
 
 def parse_memo(path: Path) -> dict:
+    from email.header import decode_header, make_header
+
     m = email.message_from_binary_file(open(path, "rb"))
-    subj = str(m["Subject"])
+    subj = str(make_header(decode_header(str(m["Subject"]))))
     body = ""
     for p in m.walk():
         if p.get_content_type() == "text/plain" and not p.get_filename():
@@ -31,11 +34,13 @@ def parse_memo(path: Path) -> dict:
     for i, h in enumerate(heads):
         chunk = body[h.start() : heads[i + 1].start() if i + 1 < len(heads) else len(body)]
         rate = RATE_RE.search(chunk)
+        fals = FALS_RE.search(chunk)
         theses.append(
             {
                 "n": int(h.group(1)),
                 "title": h.group(2).strip()[:200],
                 "rating": float(rate.group(1)) if rate else None,
+                "falsifier": fals.group(1).strip()[:500] if fals else None,
                 "body": " ".join(chunk.strip().split())[:2000],
             }
         )

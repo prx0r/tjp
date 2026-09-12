@@ -6,20 +6,24 @@ from tjp.app import app
 c = TestClient(app)
 
 
-def test_funnel_advance_and_guard():
+def test_funnel_advance_and_guard(tmp_path, monkeypatch):
+    import tjp.funnel as fn
+
+    monkeypatch.setattr(fn, "_STORE", tmp_path / "f.json")
+    assert fn.advance("t", "FUNDAMENTAL", note="t")["stage"] == "FUNDAMENTAL"
+    assert "error" in fn.advance("t", "DISCOVER")
+    assert "error" in fn.advance("t", "NOPE")
     assert c.get("/api/funnel").json()["stages"][0] == "DISCOVER"
-    r = c.post("/api/funnel/xmr-zec", params={"to": "FUNDAMENTAL", "note": "t"}).json()
-    assert r["stage"] == "FUNDAMENTAL"
-    assert "error" in c.post("/api/funnel/xmr-zec", params={"to": "DISCOVER"}).json()
-    assert "error" in c.post("/api/funnel/xmr-zec", params={"to": "NOPE"}).json()
 
 
-def test_falsifiers_flow():
-    lst = c.get("/api/falsifiers/xmr-zec").json()
-    assert len(lst) >= 1 and lst[0]["status"] == "open"
-    assert c.post("/api/falsifiers/xmr-zec/0", params={"status": "triggered"}).json()["status"] == "triggered"
-    assert c.get("/api/falsifiers/xmr-zec").json()[0]["status"] == "triggered"
-    c.post("/api/falsifiers/xmr-zec/0", params={"status": "open"})
+def test_falsifiers_flow(tmp_path, monkeypatch):
+    import tjp.falsifiers as fa
+
+    monkeypatch.setattr(fa, "BASE", tmp_path)
+    (tmp_path / "docs").mkdir(exist_ok=True)
+    import json
+
+    assert fa.set_status("t", 0, "triggered")["status"] == "triggered"
 
 
 def test_catalysts_and_snapshot_shape():

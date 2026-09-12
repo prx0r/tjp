@@ -1,8 +1,100 @@
 {
  "id": "1789128115646",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_Power=2Dquality_scarcity_?=\n\t=?UTF-8?Q?=2B_lab=2Dutilization_inversion?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 Power-quality scarcity + lab-utilization inversion",
  "date": "Fri, 11 Sep 2026 07:35:43 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 2,
+   "title": "New concept: *load-shape alpha*",
+   "rating": null,
+   "falsifier": null,
+   "body": "2) New concept: *load-shape alpha* Two 1-GW data centers are not economically equivalent if one has smooth utilization and the other has violent GPU-cluster load ramps. The physical grid prices not only energy and peak MW but increasingly *dP/dt*, harmonic spectrum, fault behavior and reactive-power requirements. The kernel should add: - load_ramp_rate - short_circuit_ratio - reactive_power_intensity - harmonic_distortion_risk - grid_stability_capex_per_MW - stable_MW / nominal_MW This may produce alpha before reported electricity consumption changes: a new accelerator generation can increase infrastructure requirements simply by changing rack/load dynamics."
+  },
+  {
+   "n": 3,
+   "title": "Autonomous labs create a *utilization inversion*: bullish consumables,",
+   "rating": null,
+   "falsifier": null,
+   "body": "3) Autonomous labs create a *utilization inversion*: bullish consumables, ambiguous instrument capex This is an important correction to our earlier \u201cAI makes experiments abundant -> buy instruments\u201d thesis. The July 2025 AI-native biomolecular lab demonstrated multi-user autonomous operation and explicitly reported *higher instrument utilization and experimental efficiency*. A July 2026 arXiv paper then treats optimal scheduling of scarce instruments as a central autonomous-lab problem. https://arxiv.org/abs/2507.02379 and https://arxiv.org/abs/2607.01188 So AI can simultaneously:"
+  },
+  {
+   "n": 1,
+   "title": "raise experiments/day dramatically;",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. raise experiments/day dramatically;"
+  },
+  {
+   "n": 2,
+   "title": "raise utilization of installed instruments;",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. raise utilization of installed instruments;"
+  },
+  {
+   "n": 3,
+   "title": "reduce the number of instruments required per experiment.",
+   "rating": null,
+   "falsifier": "hypothesis generation grows so fast that utilization gains are",
+   "body": "3. reduce the number of instruments required per experiment. That means the higher-confidence exposure may be *per-run consumables + services + calibration + expensive validation endpoints*, not every instrument OEM. Sartorius provides a live financial example: H1 2026 growth was driven mainly by recurring consumables/services while instruments only stabilized/slightly grew. https://www.sartorius.com/en/company/newsroom/corporate-news/2026-half-year-results-sartorius-group-1845854 Bio-Techne is even more consumables-heavy: in the nine months to March 2026 it reported ~$724m consumables revenue versus ~$79m instruments. https://investors.bio-techne.com/all-sec-filings/xbrl_doc_only/3499 *Kernel primitive:* experiment_volume_beta \u00d7 recurring_consumable_share \u2212 utilization_efficiency_beta \u00d7 instrument_capex_share This lets us distinguish companies that win from higher experimental throughput from those whose installed-base sales could be cannibalized by better orchestration. *Falsifier:* hypothesis generation grows so fast that utilization gains are overwhelmed and instrument fleets still need to expand faster than experiments-per-machine."
+  },
+  {
+   "n": 4,
+   "title": "New bottleneck: *agent-to-instrument interoperability / reservation",
+   "rating": null,
+   "falsifier": null,
+   "body": "4) New bottleneck: *agent-to-instrument interoperability / reservation rights* A June 2026 paper proposes LAP, an Agent-to-Instrument Protocol, because MCP/A2A do not model physical constraints such as exclusive instrument ownership, sample locking, signed capabilities, calibration, uncertainty and safety fences. https://arxiv.org/abs/2606.03755 This implies autonomous science has a software bottleneck analogous to cloud schedulers\u2014but tied to physically scarce machines. The economically scarce object may become *reserved instrument-time with guaranteed calibration state*, not ownership of the instrument itself. Potential future signals: - reservation wait times by instrument class; - $/instrument-hour; - utilization by instrument; - calibration downtime; - failed reservation / queue rates; - cross-lab federated capacity. This creates a possible new market category: *science capacity exchanges / labs-as-a-service*, with option-like pricing for scarce experimental slots."
+  },
+  {
+   "n": 5,
+   "title": "Hidden cooling derivative: *facility-loop heat rejection*, not rack",
+   "rating": null,
+   "falsifier": "standardized direct-to-chip architectures plus plentiful",
+   "body": "5) Hidden cooling derivative: *facility-loop heat rejection*, not rack cooling Rack-level liquid cooling is becoming consensus. The less discussed point is that liquid cooling does not make heat disappear; it moves the bottleneck outward to CDU -> heat exchanger -> facility loop -> external heat rejection. Evidence of actual capital allocation is strong: - Modine signed a *>$4B capacity agreement* through 2029 with one strategic data-center customer and received $165m upfront to fund capacity. https://investors.modine.com/news/news-details/2026/Modine-Announces-Landmark-4-Billion-Long-Term-Capacity-Agreement-through-2029-with-Strategic-Data-Center-Customer-for-Airedale-by-Modine-Cooling-Solutions/default.aspx - Munters won a *SEK 2.0B* modular AI-cooling order in April 2026 covering high-capacity CDUs and over-rack CRAHs. https://www.munters.com/en-ie/news-media/press-releases/2026/munters-wins-order-of-bsek-2.0-for-a-modular-ai-cooling-solution - Alfa Laval launched a facility-loop product combining pumps, heat exchangers and filtration, and is already supplying heat exchangers inside 2.3 MW CDUs. https://www.alfalaval.com/media/news/investors/2026/alfa-laval-launches-freewaterloop-to-support-efficient-data-center-cooling/ and https://www.alfalaval.com/media/stories/data-center-cooling/cooling-the-ai-revolution/ *New derivative thesis:* as cold plates/CDUs commoditize, scarcity may migrate to the outdoor/facility loop\u2014heat-exchange surface, pumps, water treatment, dry coolers, site water/ambient constraints, commissioning and thermal redundancy. *Falsifier:* standardized direct-to-chip architectures plus plentiful industrial heat-exchanger capacity drive margins down before demand becomes material."
+  },
+  {
+   "n": 6,
+   "title": "Fresh world-state contradiction: compute bullish but grid-stability",
+   "rating": null,
+   "falsifier": null,
+   "body": "6) Fresh world-state contradiction: compute bullish but grid-stability bearish cannot both persist Nvidia announced today that Australian partners plan up to *2 GW* of additional AI capacity, while new Transgrid analysis says Australian data-center peak demand could materially exceed prior grid forecasts. https://www.reuters.com/world/asia-pacific/nvidia-teams-up-with-australian-partners-build-ai-factory-capacity-2026-09-10/ If equity markets price aggressive accelerator shipments but do not simultaneously price the required growth in power-quality/grid-support infrastructure, the two sets of valuations encode inconsistent physical worlds. This is a good new *World-State Consistency Arbitrage* template: implied accelerator deployments -> implied dynamic MW -> required stability equipment -> compare with supplier valuations/order books The same mapping can be run for cooling, transformers, optical test, UPW, fab inspection, and experimental validation. Rank for this run"
+  },
+  {
+   "n": 1,
+   "title": "*Power-quality / stable-MW scarcity* \u2014 highest novelty + strong",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. *Power-quality / stable-MW scarcity* \u2014 highest novelty + strong revealed-preference evidence; AMSC deserves deeper work."
+  },
+  {
+   "n": 2,
+   "title": "*Lab utilization inversion* \u2014 changes which AI-to-science companies",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. *Lab utilization inversion* \u2014 changes which AI-to-science companies we should own; recurring consumables/services may dominate instrument capex."
+  },
+  {
+   "n": 3,
+   "title": "*Agent-to-instrument reservation markets* \u2014 early but structurally",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. *Agent-to-instrument reservation markets* \u2014 early but structurally important; potential new data source and future infrastructure category."
+  },
+  {
+   "n": 4,
+   "title": "*Facility-loop heat rejection* \u2014 strong demand evidence, but some",
+   "rating": null,
+   "falsifier": null,
+   "body": "4. *Facility-loop heat rejection* \u2014 strong demand evidence, but some names are already rerated/crowded."
+  },
+  {
+   "n": 5,
+   "title": "*Load-shape alpha* \u2014 not yet easily tradable, but potentially a",
+   "rating": null,
+   "falsifier": null,
+   "body": "5. *Load-shape alpha* \u2014 not yet easily tradable, but potentially a powerful kernel feature and leading indicator. New kernel features to add stable_deliverable_MW, load_ramp_rate, short_circuit_ratio, reactive_power_intensity, grid_stability_capex_per_MW, instrument_utilization_elasticity, experiment_volume_beta, recurring_consumable_share, instrument_slot_scarcity, calibration_downtime, facility_loop_heat_rejection_intensity, world_state_physical_consistency_gap . The strongest next deep dive is *AMSC + the full grid-stability supply chain beneath AI campuses*, especially smaller listed suppliers of reactive-power control, harmonic filtering, synchronous/grid-forming support, protection and power-quality measurement."
+  }
+ ]
 }

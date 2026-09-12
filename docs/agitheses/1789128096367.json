@@ -1,8 +1,51 @@
 {
  "id": "1789128096367",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_10_Sep_2026_=E2=80=94_Mask_re?=\n\t=?UTF-8?Q?set=2C_DNA_compiler=2C_qualification_moats?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 10 Sep 2026 \u2014 Mask reset, DNA compiler, qualification moats",
  "date": "Fri, 11 Sep 2026 06:35:54 -0500",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "LARGE-FORMAT PHOTOMASK RESET \u2014 a standards transition can strand an",
+   "rating": null,
+   "falsifier": "industry decides stitching economics are acceptable and 12-inch",
+   "body": "1. LARGE-FORMAT PHOTOMASK RESET \u2014 a standards transition can strand an entire equipment ecosystem ASML + TSMC formally launched an industry initiative on Sept 8 to move High-NA EUV from today\u2019s 6-inch masks toward 12-inch masks, targeting a pilot line by 2031 and production readiness by 2033. Intel/ASML separately say the transition requires changes across mask makers, automation suppliers, EDA, materials, and fabs. This is not just a demand-growth story: it creates a forced replacement/refit cycle and potential obsolescence for equipment that cannot scale to the new mask format. Alpha shape: buy suppliers whose know-how transfers to 12-inch while shorting/avoiding installed-base economics trapped in 6-inch infrastructure. Cross-world longs include HOYA/AGC (EUV blanks) and Lasertec-like mask inspection if their tool roadmaps qualify for the larger format. HOYA\u2019s 2026 integrated report says it intends to retain first-supplier position in leading-edge EUV and expand for High-NA/Hyper-NA, with a new Singapore plant starting FY28 and ~\u00a542bn initial investment. Falsifier: industry decides stitching economics are acceptable and 12-inch adoption slips materially beyond 2033, or mask/tool suppliers commoditize the format transition. Sources: https://pr.cld.tsmc.com/english/news/3338 https://www.intel.com/content/www/us/en/newsroom/news/intel-foundry/intel-foundry-asml-accelerate-industry-readiness-for-high-na-euv.html https://www.hoya.com/ir/2026/en/review/it.html"
+  },
+  {
+   "n": 1,
+   "title": "DNA SYNTHESIS AS THE PHYSICAL COMPILER FOR AI BIOLOGY",
+   "rating": null,
+   "falsifier": "AI-designed sequences remain experimentally low-yield, demand",
+   "body": "1. DNA SYNTHESIS AS THE PHYSICAL COMPILER FOR AI BIOLOGY AI can generate sequences essentially for free; useful biology still requires those sequences to be physically written, expressed and tested. Twist launched Complex Genes in May specifically citing AI-guided protein design; it says the service can accept ~99.5% of clonal-gene orders and sequences up to 7kb. Its June-quarter filing showed genes shipped up 56% to 369,000 and revenue +23% y/y, but the company remains loss-making. The stronger thesis is not \u2018Twist wins AI drug discovery.\u2019 It is: as sequence-generation cost collapses, the scarce layer is translating bits into reliable DNA at scale. That is a compiler layer shared across many competing AI-biology models. Candidate exposure: TWST is the clean public pure-play; Danaher has IDT but diluted exposure; GenScript offers another route. TWST is financially risky: Q3 revenue $118.4m, net loss ~$35m. This is a bottleneck candidate, not a valuation conclusion. Falsifier: AI-designed sequences remain experimentally low-yield, demand does not translate into synthesis volume, or in-house/on-benchtop synthesis destroys centralized provider economics. Sources: https://investors.twistbioscience.com/news-releases/news-release-details/twist-bioscience-expands-clonal-genes-offering-include-long-and https://www.reuters.com/business/healthcare-pharmaceuticals/amazon-launches-ai-research-tool-speed-early-stage-drug-discovery-2026-04-14/"
+  },
+  {
+   "n": 1,
+   "title": "CROs MAY BE A WORLD-STATE CONSISTENCY ARBITRAGE, NOT AN AI SHORT",
+   "rating": null,
+   "falsifier": "pharma internalizes trial operations faster than candidate",
+   "body": "1. CROs MAY BE A WORLD-STATE CONSISTENCY ARBITRAGE, NOT AN AI SHORT Reuters reported in March that IQVIA, Medpace and Charles River sold off partly on fears AI agents would let pharma internalize CRO work, while experts argued patient recruitment, site operations and regulatory execution remain difficult to automate. Since then ICON has partnered with Anthropic and Advarra: the latter connects ICON to technology used by >50,000 investigators, including 90% of NCI-designated cancer centers. The non-obvious world-state contradiction: if AI really generates many more viable drug candidates faster, physical clinical-development throughput may become MORE valuable even while administrative CRO labor is automated. The winning asset may be the site/patient network and proprietary operational data, not billable human hours. Candidates: ICLR, IQV, MEDP. Prefer companies where network/data share of moat is high and human-hour revenue share can shrink without destroying margins. Falsifier: pharma internalizes trial operations faster than candidate volume expands, regulators accept synthetic/in-silico evidence as substitutes for human trials, or AI creates enough site/recruitment efficiency that trial-network scarcity disappears. Sources: https://www.reuters.com/business/healthcare-pharmaceuticals/ai-led-selloff-contract-research-firms-may-be-misjudging-disruption-risk-2026-03-31/ https://www.iconplc.com/news-events/press-releases/icon-and-advarra-introduce-new-research-ready-connected-site-network https://www.iconplc.com/news-events/press-releases/icon-announces-multi-year-collaboration-anthropic-bring-ai-clinical"
+  },
+  {
+   "n": 1,
+   "title": "PROBE CARDS / TEST INTERFACES LOOK LIKE A \u2018HARDWARE SUBSCRIPTION\u2019 ON",
+   "rating": null,
+   "falsifier": "advanced packaging test becomes substantially",
+   "body": "1. PROBE CARDS / TEST INTERFACES LOOK LIKE A \u2018HARDWARE SUBSCRIPTION\u2019 ON AI COMPLEXITY TrendForce\u2019s June probe-card work says AI packaging is reshaping the market, order visibility has stretched from ~1 quarter to as much as 2 years, and consumable probe tips create recurring repair/replacement economics. Today, reports say Nvidia is locking high-end test-interface capacity while fabs validate second sources. This is exactly the experimental-scarcity thesis, but with a better business model than one-off capital tools. Candidates: Technoprobe, FormFactor, MPI, MJC; investigate smaller Taiwanese entrants CHPT/WinWay for convexity. Separate wafer probe, final-test sockets, HBM and photonics exposure rather than treating them as one market. Falsifier: advanced packaging test becomes substantially parallelized/standardized, probe-card ASPs fall despite AI complexity, or second-source qualification removes scarcity faster than end demand grows. Sources: https://www.trendforce.com/research/download/RP260626XO3 https://www.formfactor.com/ (company materials should be used for follow-up)"
+  },
+  {
+   "n": 1,
+   "title": "QUALIFICATION LATENCY IS A MOAT \u2014 THE MATERIAL MAY BE COMMODITY, THE",
+   "rating": null,
+   "falsifier": "Chinese fabs qualify domestic DCS rapidly with no yield penalty,",
+   "body": "1. QUALIFICATION LATENCY IS A MOAT \u2014 THE MATERIAL MAY BE COMMODITY, THE QUALIFIED MATERIAL IS NOT China began collecting provisional deposits of 80.8%-99.2% on Japanese dichlorosilane from Sept 8. DCS is a thin-film deposition precursor. The interesting signal is not the tariff itself: semiconductor-grade materials require extreme purity, container control, analytical capability and fab-specific qualification. A political shock can reprice supply immediately; customer qualification cannot move at political speed. This suggests a new kernel variable: QualifiedCapacity = physical capacity \u00d7 purity capability \u00d7 customer qualification \u00d7 geographic accessibility. Raw tonnes are misleading. The alpha is in suppliers with already-qualified capacity in the right geography. Candidates: Shin-Etsu, Nippon Sanso, Air Liquide/Denal, Korean specialty-gas suppliers such as TEMC; Solvay is separately doubling ultra-pure H2O2 capacity in Taiwan by end-2026 to >70kt/yr because wafer-cleaning purity demand is rising. Falsifier: Chinese fabs qualify domestic DCS rapidly with no yield penalty, or end-user inventory makes the trade action economically irrelevant. Sources: https://apnews.com/article/ea58c95c47481c5c822a3a544e6b68cc https://www.reuters.com/world/asia-pacific/solvay-more-than-double-taiwan-chip-peroxide-capacity-targets-tripling-2026-09-03/"
+  },
+  {
+   "n": 1,
+   "title": "PROCUREMENT RIGHTS ARE BECOMING REAL OPTIONS",
+   "rating": null,
+   "falsifier": "equipment capacity additions collapse lead times rapidly or",
+   "body": "1. PROCUREMENT RIGHTS ARE BECOMING REAL OPTIONS JLL\u2019s 2026 data-center outlook says 57% of projects experienced delays of 3+ months in 2025; US equipment lead times average ~42 weeks, 83% above 2019, and developers are pre-ordering some materials 24 months ahead and holding 6-12 months of strategic inventory. Once delivery slots are scarce, a manufacturer\u2019s booked slot or a developer\u2019s reserved allocation becomes an economically valuable option even before the underlying equipment exists. Kernel implication: add capacity_reservation_value and cancellation/transferability to bottleneck scoring. Backlog quality should distinguish firm orders, reservation deposits, cancellable slots and speculative queue positions. Falsifier: equipment capacity additions collapse lead times rapidly or reservations prove non-transferable/cancellable with little economic value. Source: https://www.jll.com/content/dam/jllcom/en/global/documents/reports/research-reports/26-research-global-data-center-outlook-new.pdf Research priority for next pass The most interesting of these is the 12-inch mask reset because it combines: forced standards migration + huge installed-base implications + small upstream suppliers + a multi-year timetable that public markets may not model explicitly. I would next map every 6x12-mask dependency: blank substrate, multilayer coating, resist, writer, inspection, cleaning, pellicle, mask handling, stockers, transport pods, EDA field assumptions and scanner interfaces, then score each supplier for transferability vs stranded-capital risk. Second priority: DNA synthesis + CRO/site networks as a single AI-biology scarcity chain: model-generated sequence \u2192 synthesis \u2192 assay \u2192 animal/preclinical \u2192 patient/site \u2192 regulatory evidence. The value should migrate down that chain as each preceding stage gets automated."
+  }
+ ]
 }

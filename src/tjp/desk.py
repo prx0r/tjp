@@ -12,7 +12,7 @@ def inventory() -> dict:
     wk = ROOT / "vendor" / "worldstate-kernel"
     if wk.exists():
         out["kernel"] = sorted(str(p.relative_to(ROOT)) for p in wk.rglob("*") if p.is_file())
-    th = ROOT / "docs" / "theses"
+    th = ROOT / "docs" / "agitheses"
     if th.exists():
-        out["theses"] = sorted(str(p.relative_to(ROOT)) for p in th.rglob("*.md"))
+        out["theses"] = sorted(str(p.relative_to(ROOT)) for p in th.glob("*.json") if p.name != "schema.json")
     return out

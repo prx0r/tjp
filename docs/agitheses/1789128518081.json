@@ -1,8 +1,58 @@
 {
  "id": "1789128518081",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_Certification_Bandwidth?=\n\t=?UTF-8?Q?_=26_Physical=2DAI_Permission_Scarcity?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 Certification Bandwidth & Physical-AI Permission Scarcity",
  "date": "Fri, 11 Sep 2026 06:14:41 -0500",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "SGS (SGSN / SGSOY) \u2014 highest direct signal. H1 2026 Digital Trust",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. SGS (SGSN / SGSOY) \u2014 highest direct signal. H1 2026 Digital Trust growth 38%; certification and AI assurance already contributing. Current forward P/E is roughly 21\u201323x depending venue/data source. Not cheap, but not an AI-style multiple either."
+  },
+  {
+   "n": 2,
+   "title": "Bureau Veritas (BVI) \u2014 less pure, but current forward P/E around",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. Bureau Veritas (BVI) \u2014 less pure, but current forward P/E around 16.5\u201318x. It has a live AI Act assessment offering and a global certification footprint. This may be the better valuation setup if AI/physical-AI assurance becomes structurally important."
+  },
+  {
+   "n": 3,
+   "title": "Intertek (ITRK) \u2014 similar structural exposure, but current valuation",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. Intertek (ITRK) \u2014 similar structural exposure, but current valuation around 20x forward earnings and corporate-event noise from recent EQT takeover interest makes it a less clean thesis vehicle. Falsifiers \u2022 Regulators accept self-certification or software-only evidence for most physical-AI systems. \u2022 NVIDIA/large OEMs internalize most testing and certification economics. \u2022 Safety standards stabilize enough that incremental validation per software/model update becomes trivial. \u2022 Certification staffing scales linearly with demand and pricing power fails to appear. SECOND RABBIT HOLE: POSITION-FEEDBACK BANDWIDTH Physical AI cannot act directly from intelligence; it needs increasingly precise feedback about where things actually are. Encoders, probes and metrology form the feedback channel between AI-generated intent and physical motion. Renishaw is a useful proof point. Its Position Measurement revenue grew 21.6% at constant FX over the first nine months of FY2026, while semiconductor/electronics demand drove a substantial order-book expansion. The company then reported record Q4 revenue, +27% YoY, and roughly +14% FY2026 revenue growth. The stock has already rerated strongly and trades around 25\u201326x forward earnings, so this is more useful as evidence for the primitive than as an obvious cheap trade. New primitive: PhysicalFeedbackIntensity = value of position/measurement feedback per unit of physical automation The interesting downstream screen is not simply robotics vendors. It is suppliers where more autonomous axes, tighter tolerances, and faster motion all increase feedback-content per machine. THIRD RABBIT HOLE: SAFETY-FENCE HARDWARE / AGENT-TO-INSTRUMENT PERMISSIONING Recent autonomous-lab work is converging on explicit physical-world safety primitives. LAP proposes cryptographically bound operator-confirmation tokens, first-class instrument reservations, sample locking, calibration-anchored measurements and safety handshakes. A separate 2026 trapped-ion sy"
+  },
+  {
+   "n": 1,
+   "title": "Certification bandwidth / safety-case throughput \u2014 9.4/10",
+   "rating": 9.4,
+   "falsifier": null,
+   "body": "1. Certification bandwidth / safety-case throughput \u2014 9.4/10"
+  },
+  {
+   "n": 2,
+   "title": "Physical-AI assurance companies, especially SGS/Bureau Veritas \u2014",
+   "rating": 8.9,
+   "falsifier": null,
+   "body": "2. Physical-AI assurance companies, especially SGS/Bureau Veritas \u2014 8.9/10"
+  },
+  {
+   "n": 3,
+   "title": "Agent-to-instrument safety fences \u2014 8.7/10",
+   "rating": 8.7,
+   "falsifier": null,
+   "body": "3. Agent-to-instrument safety fences \u2014 8.7/10"
+  },
+  {
+   "n": 4,
+   "title": "Position-feedback intensity \u2014 8.4/10",
+   "rating": 8.4,
+   "falsifier": null,
+   "body": "4. Position-feedback intensity \u2014 8.4/10 The important conceptual update is that permission scarcity should be modeled as a throughput constraint, not just a regulatory risk. In a world where cognition/software changes almost instantly, organizations that can legally and credibly convert novel intelligence into deployable physical action may become toll roads."
+  }
+ ]
 }

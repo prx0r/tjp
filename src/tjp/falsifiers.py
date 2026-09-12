@@ -23,6 +23,7 @@ def _states() -> dict:
 def set_status(trade_id: str, idx: int, status: str) -> dict:
     assert status in ("open", "triggered", "cleared")
     f = BASE / "docs" / "falsifiers.json"
+    f.parent.mkdir(parents=True, exist_ok=True)
     d = _states()
     d.setdefault(trade_id, {})[str(idx)] = status
     f.write_text(json.dumps(d, indent=1))

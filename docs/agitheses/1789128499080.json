@@ -1,33 +1,93 @@
 {
  "id": "1789128499080",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_Alpha_Hunt_=E2=80=94_Product_Identity=2C_Exper?=\n\t=?UTF-8?Q?imental_Entropy_=26_Rare=2DFailure_Data?=",
+ "subject": "Fwd: Post-AGI Alpha Hunt \u2014 Product Identity, Experimental Entropy & Rare-Failure Data",
  "date": "Fri, 11 Sep 2026 07:14:36 -0400",
- "kind": "research_memo",
+ "kind": "alpha_hunt",
  "executive_summary": "This pass produced four useful additions to the scarcity-migration kernel. The strongest is *mandatory physical identity infrastructure*: the EU has now switched on a machine-readable Digital Product Passport registry, with the first hard compliance cliff on 18 February 2027. This creates a rare overlap between *permission scarcity* and *world-state consistency*. The second is *experimental entropy inflation*: AI appears to expand science into less-studied, more heterogeneous targets, which can increase demand for bespoke physical validation even when prediction becomes cheap. The third is *rare-failure telemetry as a negative-data moat*. The fourth is a theoretical confirmation from NBER that automation in O-ring systems can increase the value of the remaining bottleneck task rather than merely substitute it.",
  "theses": [
   {
    "n": 1,
    "title": "Mandatory item-level identity becomes physical-world infrastructure",
    "rating": 9.5,
+   "falsifier": null,
    "body": "1. Mandatory item-level identity becomes physical-world infrastructure \u2014 *9.5/10 alpha* Thesis AGI cannot act safely on a physical world represented by ambiguous SKUs, stale databases and unverifiable product histories. Until now, better physical identity was mostly an efficiency choice. The EU is turning it into a legal prerequisite. On 20 July 2026 the European Commission made the *Digital Product Passport Registry operational*. It stores unique product identifiers and metadata, supports API registration, publishes machine-readable semantic models, and includes verification/logging. The first hard deadline is *18 February 2027*, when covered EV, LMT and industrial batteries must have a battery passport. The Commission\u2019s August guidance enumerates *71 required battery-passport data points*. This is more than ESG/compliance plumbing. It is the beginnings of a standardized *physical-world state API*: physical object -> persistent ID -> verified attributes -> lifecycle state -> machine-readable API -> authorized action That is directly useful to autonomous procurement, repair, recycling, insurance, resale, logistics, maintenance and robotics. Tradable exposures *Avery Dennison (NYSE: AVY)* is the best risk/reward exposure found. It already combines RFID/NFC/QR physical identifiers, cloud software and DPP tooling. It launched ReadyDPP in June 2026. Q2 sales grew 10.9%, adjusted EPS 19.4%; apparel/general-retail Intelligent Labels grew ~10%. At roughly *$12.9B market cap and ~16\u201317x forward earnings*, valuation is far less demanding than RFID pure plays. *Impinj (NASDAQ: PI)* is the cleaner endpoint-RFID semiconductor exposure. Q2 revenue hit a record $108.4M, but at roughly *$5.25B market cap and ~60\u201370x forward earnings*, much of the identification-growth narrative is already priced. *Zebra (NASDAQ: ZBRA)* is broader but owns scanners, printers, RFID, RTLS and machine vision. Q2 Asset Visibility & Automation organic sales rose 11.4%. Why this matters for the kernel Ad"
   },
   {
    "n": 2,
    "title": "Experimental entropy inflation \u2014 AI increases the *variety* of physical",
    "rating": 9.3,
+   "falsifier": null,
    "body": "2. Experimental entropy inflation \u2014 AI increases the *variety* of physical validation required \u2014 *9.3/10* Thesis A common assumption is: better prediction -> fewer experiments Recent evidence suggests a more interesting dynamic: better prediction -> much larger searchable hypothesis space -> exploration of previously ignored targets -> more heterogeneous/custom experiments The April 2026 NBER AlphaFold study finds that experimental structure determination did *not* collapse after AlphaFold2. Instead, research shifted toward proteins that previously lacked structural information; basic research on those proteins increased roughly *15\u201340%* relative to already-characterized proteins. That implies AI can increase *experimental entropy* even if it reduces experiments per hypothesis. GenScript now provides unusually direct commercial confirmation. In H1 2026 its AI-enabled drug-discovery business *doubled YoY* for a third consecutive half-year of rapid growth. Management says AI customers increasingly require protein engineering, biologics discovery and physical validation; Gene-to-Protein represents ~66% of Life Science revenue. Earlier 2026 commentary indicated roughly *70% of protein orders* were supporting AI-driven antibody/complex-antibody discovery programs. This is materially stronger evidence than the earlier generic \u201cDNA synthesis is the compiler\u201d thesis. The scarce layer is becoming *rapid custom design-build-test throughput for off-distribution biological objects* . Candidate exposure *GenScript Biotech (1548.HK <http://1548.HK>)* is the obvious direct exposure, but no longer uncrowded. The stock\u2019s market cap is around HK$70\u201375B and has nearly doubled over the last year; current screens imply ~115x forward earnings. The business signal is excellent; the entry price is not. Better alpha may sit beneath GenScript in suppliers of high-throughput purification, custom reagents, assay development, specialty resins and low-volume/high-mix automation. Kernel primitive"
   },
   {
    "n": 3,
    "title": "Rare-failure telemetry becomes a negative-data asset class \u2014 *8.9/10*",
    "rating": 8.9,
+   "falsifier": null,
    "body": "3. Rare-failure telemetry becomes a negative-data asset class \u2014 *8.9/10* Thesis As autonomous systems get better, ordinary-success data gets cheaper while *real failures become rarer and more valuable*. The training objective shifts from \u201clearn normal operation\u201d to \u201cfind the 1-in-100k event that still kills the system.\u201d 2026 autonomous-vehicle research shows adaptive stress testing and diffusion-based failure sampling can discover collision modes that ordinary Monte Carlo simulation misses. Manufacturing research reaches the same structural problem: mature systems generate extremely imbalanced failure datasets. This creates a new data-moat hierarchy: success telemetry < synthetic failures < expert-labelled real failures < longitudinal failure + remediation histories The most valuable industrial datasets may therefore belong to businesses that have spent decades inspecting things that break. Obscure public exposure: MISTRAS Group (NYSE: MG) MISTRAS is a ~$0.6B market-cap asset-integrity/NDT company spanning aerospace, power, infrastructure, industrial facilities and pipelines. Its proprietary software centralizes inspection and integrity data for predictive analytics and benchmarking. The current business is also showing the exact physical bottlenecks the thesis predicts: in Q2 management said *Aerospace & Defense demand was temporarily outpacing testing capacity*, and data-center/power investment was increasing demand for QA, inspection, commissioning and asset-integrity work. Q2 revenue grew 4.2%, operating income 53.6%, and adjusted EBITDA 7%. At roughly *16\u201318x forward earnings*, MG is much cheaper than most explicit AI-data companies, although the stock has already roughly doubled over the last year and remains labor-intensive with debt. The optionality is not that MISTRAS suddenly becomes an AI software company. It is that decades of failure/inspection histories gain value as industrial models need rare, labelled, physical-ground-truth events. Kernel primitive "
   },
   {
    "n": 4,
    "title": "O-ring automation formally validates scarcity migration \u2014 *8.7/10,",
    "rating": 8.7,
-   "body": "4. O-ring automation formally validates scarcity migration \u2014 *8.7/10, kernel-level rather than stock-specific* The January 2026 NBER paper *O-Ring Automation* is unusually important for our framework. It models production where task qualities multiply rather than add. In these systems, smoothly improving automation can trigger discrete bundled adoption \u2014 and automating some tasks can *increase the value of the remaining human or physical bottleneck tasks*. This is essentially a formal economic foundation for scarcity migration. If output is approximately: Q = q1 \u00d7 q2 \u00d7 ... \u00d7 qn then raising nine factors toward infinity does not make the tenth irrelevant; it increases the shadow value of improving the tenth. This gives a general screen: 1. Identify workflows with multiplicative quality/completion constraints. 2. Estimate which stages AI collapses first. 3. Recalculate the marginal economic value of the untouched stage. 4. Buy the provider of that stage *before revenue growth becomes obvious* . This is more useful than \u201cAI exposure\u201d screens because it predicts winners that have almost no AI narrative at all. New kernel primitive O_Ring_Gating_Leverage_i = downstream value unlocked by marginal improvement in task i / cost of task i Then model its derivative after upstream automation: d(O_Ring_Gating_Leverage_i) / d(AI capability) The largest positive derivatives are the hidden beneficiaries. Source: - NBER O-Ring Automation: https://www.nber.org/papers/w34639 Ranking 1. *Mandatory physical identity / DPP infrastructure \u2014 9.5* 2. *Experimental entropy / custom biological physicalization \u2014 9.3* 3. *Rare-failure telemetry / negative-data asset class \u2014 8.9* 4. *O-ring gating leverage as a general alpha screen \u2014 8.7* Best current tradable setup *AVY* looks strongest on combined thesis quality, current evidence and valuation. The DPP layer is newly operational rather than hypothetical, the first mandatory deadline is only ~5 months away, Avery already owns both the physical-"
+   "falsifier": null,
+   "body": "4. O-ring automation formally validates scarcity migration \u2014 *8.7/10, kernel-level rather than stock-specific* The January 2026 NBER paper *O-Ring Automation* is unusually important for our framework. It models production where task qualities multiply rather than add. In these systems, smoothly improving automation can trigger discrete bundled adoption \u2014 and automating some tasks can *increase the value of the remaining human or physical bottleneck tasks*. This is essentially a formal economic foundation for scarcity migration. If output is approximately: Q = q1 \u00d7 q2 \u00d7 ... \u00d7 qn then raising nine factors toward infinity does not make the tenth irrelevant; it increases the shadow value of improving the tenth. This gives a general screen:"
+  },
+  {
+   "n": 1,
+   "title": "Identify workflows with multiplicative quality/completion constraints.",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. Identify workflows with multiplicative quality/completion constraints."
+  },
+  {
+   "n": 2,
+   "title": "Estimate which stages AI collapses first.",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. Estimate which stages AI collapses first."
+  },
+  {
+   "n": 3,
+   "title": "Recalculate the marginal economic value of the untouched stage.",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. Recalculate the marginal economic value of the untouched stage."
+  },
+  {
+   "n": 4,
+   "title": "Buy the provider of that stage *before revenue growth becomes obvious*",
+   "rating": null,
+   "falsifier": null,
+   "body": "4. Buy the provider of that stage *before revenue growth becomes obvious* . This is more useful than \u201cAI exposure\u201d screens because it predicts winners that have almost no AI narrative at all. New kernel primitive O_Ring_Gating_Leverage_i = downstream value unlocked by marginal improvement in task i / cost of task i Then model its derivative after upstream automation: d(O_Ring_Gating_Leverage_i) / d(AI capability) The largest positive derivatives are the hidden beneficiaries. Source: - NBER O-Ring Automation: https://www.nber.org/papers/w34639 Ranking"
+  },
+  {
+   "n": 1,
+   "title": "*Mandatory physical identity / DPP infrastructure \u2014 9.5*",
+   "rating": null,
+   "falsifier": null,
+   "body": "1. *Mandatory physical identity / DPP infrastructure \u2014 9.5*"
+  },
+  {
+   "n": 2,
+   "title": "*Experimental entropy / custom biological physicalization \u2014 9.3*",
+   "rating": null,
+   "falsifier": null,
+   "body": "2. *Experimental entropy / custom biological physicalization \u2014 9.3*"
+  },
+  {
+   "n": 3,
+   "title": "*Rare-failure telemetry / negative-data asset class \u2014 8.9*",
+   "rating": null,
+   "falsifier": null,
+   "body": "3. *Rare-failure telemetry / negative-data asset class \u2014 8.9*"
+  },
+  {
+   "n": 4,
+   "title": "*O-ring gating leverage as a general alpha screen \u2014 8.7*",
+   "rating": null,
+   "falsifier": null,
+   "body": "4. *O-ring gating leverage as a general alpha screen \u2014 8.7* Best current tradable setup *AVY* looks strongest on combined thesis quality, current evidence and valuation. The DPP layer is newly operational rather than hypothetical, the first mandatory deadline is only ~5 months away, Avery already owns both the physical-ID layer and associated software, and ~16\u201317x forward earnings leaves much less narrative premium than PI. Best asymmetric research target *MG* is stranger and less consensus. The key question is whether its proprietary integrity/failure histories can become reusable machine-learning assets rather than remaining trapped inside inspection services. If yes, the market is valuing a potentially scarce negative-data corpus as a conventional industrial-services business. Most important kernel update Add a distinction between *state data* and *state identity*. Autonomous agents need both: WorldStateReliability = identity certainty \u00d7 state freshness \u00d7 provenance \u00d7 permission If identity certainty is zero, arbitrarily intelligent agents still cannot safely map a digital decision onto the correct physical object."
   }
  ]
 }

@@ -53,6 +53,12 @@
      },
      "body": {
       "type": "string"
+     },
+     "falsifier": {
+      "type": [
+       "string",
+       "null"
+      ]
      }
     }
    }

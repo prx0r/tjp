@@ -1,8 +1,44 @@
 {
  "id": "1789129006824",
- "subject": "=?UTF-8?Q?Fwd=3A_Post=2DAGI_research_memo_=E2=80=94_11_Sep_2026?=",
+ "subject": "Fwd: Post-AGI research memo \u2014 11 Sep 2026",
  "date": "Fri, 11 Sep 2026 07:14:32 -0400",
  "kind": "research_memo",
  "executive_summary": "",
- "theses": []
+ "theses": [
+  {
+   "n": 1,
+   "title": "Calibration debt: autonomous physical systems increase the number",
+   "rating": null,
+   "falsifier": null,
+   "body": "1) Calibration debt: autonomous physical systems increase the number of sensors and instruments whose calibration must remain trustworthy over time. Recent robotics research shows calibration drift can become a safety-critical attack surface, while Transcat reported Q1 FY2027 revenue +22% and service revenue +27%."
+  },
+  {
+   "n": 2,
+   "title": "Cross-world casting collision: aerospace, defense and AI power",
+   "rating": null,
+   "falsifier": null,
+   "body": "2) Cross-world casting collision: aerospace, defense and AI power generation are bidding for the same constrained precision-casting capacity. GE Aerospace agreed on Sep. 8 to acquire Consolidated Precision Products for $11.75B specifically to address casting bottlenecks; Doncasters reported Q2 aerospace revenue +47% and industrial gas turbine revenue +42%."
+  },
+  {
+   "n": 3,
+   "title": "Ceramic-core gating layer: Morgan Advanced Materials explicitly",
+   "rating": null,
+   "falsifier": null,
+   "body": "3) Ceramic-core gating layer: Morgan Advanced Materials explicitly says it is expanding ceramic-core capacity for turbine blades as engine complexity rises. H1 2026 Technical Ceramics revenue grew 7.8%; energy demand included industrial gas turbines serving data centers. This is a third-order input beneath the already-visible casting bottleneck."
+  },
+  {
+   "n": 4,
+   "title": "Inspection-memory scarcity: as generic AI defect detection",
+   "rating": null,
+   "falsifier": null,
+   "body": "4) Inspection-memory scarcity: as generic AI defect detection improves, the scarce data may shift toward rare failures, degradation histories and false-positive/false-negative cases. ESAB completed its Eddyfi acquisition in June, adding recurring inspection and monitoring exposure across aerospace, nuclear, energy and infrastructure."
+  },
+  {
+   "n": 5,
+   "title": "Manufacturing-slot option value: long lead times turn future",
+   "rating": null,
+   "falsifier": null,
+   "body": "5) Manufacturing-slot option value: long lead times turn future production slots into economically valuable rights. Current 2026 procurement data still shows multi-quarter to multi-year lead times for switchgear, transformers and large generators, with projects reserving capacity well before site mobilization. New kernel variables: calibration_debt, cross_world_collision_score, qualification_time, design_complexity_multiplier, negative_data_density, failure_history_uniqueness, slot_option_value. Sources include arXiv 2608.28778 and 2601.16638; GE Aerospace/Reuters Sep. 8\u20139; Doncasters Q2 2026; Morgan Advanced Materials H1 2026; ESAB/Eddyfi; Transcat Q1 FY2027."
+  }
+ ]
 }
