@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
-docs/positions.json
 .venv/
+docs/positions.json
+docs/funnel.json
+docs/falsifiers.json

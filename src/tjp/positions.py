@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-_STORE = Path(__file__).resolve().parent.parent / "docs" / "positions.json"
+_STORE = Path(__file__).resolve().parent.parent.parent / "docs" / "positions.json"
 
 
 def _load() -> list:

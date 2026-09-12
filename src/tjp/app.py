@@ -89,3 +89,53 @@ def gold() -> list:
         a = json.loads(f.read_text())
         out.append({"trade_id": a["trade_id"], "seed": a["band_seed"], "rationale": a["rationale"], **score(a["factors"])})
     return out
+
+
+@app.get("/api/funnel")
+def funnel_state() -> dict:
+    from .funnel import STAGES
+    from .funnel import _load
+
+    return {"stages": STAGES, "trades": _load()}
+
+
+@app.post("/api/funnel/{trade_id}")
+def funnel_advance(trade_id: str, to: str, note: str = "") -> dict:
+    from .funnel import advance
+
+    return advance(trade_id, to, note)
+
+
+@app.get("/api/falsifiers/{trade_id}")
+def falsifier_list(trade_id: str) -> list:
+    from .falsifiers import falsifiers_for
+
+    return falsifiers_for(trade_id)
+
+
+@app.post("/api/falsifiers/{trade_id}/{idx}")
+def falsifier_set(trade_id: str, idx: int, status: str) -> dict:
+    from .falsifiers import set_status
+
+    return set_status(trade_id, idx, status)
+
+
+@app.get("/api/catalysts")
+def catalyst_list() -> list:
+    import json
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parent.parent.parent
+    return json.loads((base / "docs" / "catalysts.json").read_text())
+
+
+@app.get("/api/snapshots/latest")
+def snapshot_latest() -> dict:
+    import json
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parent.parent.parent
+    files = sorted((base / "docs" / "snapshots").glob("*.json"))
+    if not files:
+        return {"ok": False, "error": "no snapshots yet"}
+    return json.loads(files[-1].read_text())

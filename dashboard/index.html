@@ -39,6 +39,9 @@ input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#
 <h3>Open position log</h3><div id="t-pos"></div>
 <input id="p-note" placeholder="note"><button onclick="logpos()">Log position</button>
 </section>
+<section class="card"><h2>Funnel</h2><div id="funnel"></div></section>
+<section class="card"><h2>Catalyst calendar</h2><div id="cal"></div></section>
+<section class="card"><h2>Latest snapshot</h2><div id="snap"></div></section>
 </main>
 <script>
 let cur=null, curN=0;
@@ -80,6 +83,16 @@ async function vop(op){
   await fetch(`/api/vault/${op}?amount=${a}`,{method:'POST'});bal();
 }
 async function bal(){const b=await j('/api/vault/balance');document.getElementById('bal').textContent=`paper balance ${b.paper_balance} · ${b.ops} ops · 0 fee`;}
+async function extra(){
+  const f=await j('/api/funnel');
+  document.getElementById('funnel').innerHTML=`<small>${f.stages.join(' → ')}</small>`+
+    Object.entries(f.trades).map(([k,v])=>`<p>${k}: <b>${v.stage}</b></p>`).join('')||'<p><small>both trades at DISCOVER — advance via API</small></p>';
+  const cal=await j('/api/catalysts');
+  document.getElementById('cal').innerHTML=cal.map(c=>`<p><b>${c.date||'TBD'}</b> ${c.event} <small>→ ${c.affects.join(',')}</small></p>`).join('');
+  const s=await j('/api/snapshots/latest');
+  document.getElementById('snap').innerHTML=s.ok?Object.entries(s.prices).map(([k,v])=>`<p>${k}: $${v.usd} <small>mcap $${Math.round(v.usd_market_cap/1e6)}m</small></p>`).join(''):'<p><small>no snapshot</small></p>';
+}
+extra();
 init();
 </script>
 </body>
