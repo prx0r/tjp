@@ -1,0 +1,61 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "agithesis",
+ "type": "object",
+ "required": [
+  "id",
+  "subject",
+  "date",
+  "kind",
+  "theses"
+ ],
+ "properties": {
+  "id": {
+   "type": "string"
+  },
+  "subject": {
+   "type": "string"
+  },
+  "date": {
+   "type": "string"
+  },
+  "kind": {
+   "enum": [
+    "research_memo",
+    "alpha_hunt",
+    "kernel_build"
+   ]
+  },
+  "executive_summary": {
+   "type": "string"
+  },
+  "theses": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "n",
+     "title",
+     "body"
+    ],
+    "properties": {
+     "n": {
+      "type": "integer"
+     },
+     "title": {
+      "type": "string"
+     },
+     "rating": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "body": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

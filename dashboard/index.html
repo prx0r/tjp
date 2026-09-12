@@ -7,26 +7,77 @@
 <script src="lightweight-charts.js"></script>
 <style>
 body{font-family:system-ui,sans-serif;background:#0e1116;color:#e6e6e6;margin:0}
-header{padding:20px 28px;border-bottom:1px solid #222}
-main{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px 28px}
-.card{background:#161b22;border:1px solid #262c36;border-radius:10px;padding:16px}
-#chart{height:280px}
-ul{padding-left:18px;font-size:14px}
+header{padding:16px 28px;border-bottom:1px solid #222}
+nav#tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 28px;border-bottom:1px solid #222;background:#12161c}
+nav#tabs button{background:#1c222b;color:#e6e6e6;border:1px solid #2c3440;border-radius:8px;padding:8px 12px;cursor:pointer}
+nav#tabs button.active{background:#2c6f4f;border-color:#2c6f4f}
+main{padding:20px 28px}
+.card{background:#161b22;border:1px solid #262c36;border-radius:10px;padding:16px;margin-bottom:16px}
+#chart,#pnl{height:280px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+small{color:#8b949e}
+input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#1c222b;color:#e6e6e6}
 </style>
 </head>
 <body>
-<header><h1>tjp — thesis desk</h1><p>phone blueprint · worldstate kernel · memo theses</p></header>
+<header><h1>tjp — thesis desk <small>paper mode · 0 fee · no real funds</small></h1></header>
+<nav id="tabs"><strong>Theses:</strong> <span id="tablist"></span></nav>
 <main>
-<div class="card"><h2>Scores</h2><div id="chart"></div></div>
-<div class="card"><h2>Inventory</h2><ul id="inv"></ul></div>
-<div class="card"><h2>Theses</h2><p>memo extraction lands with thesisdesk.zip</p></div>
-<div class="card"><h2>Scenarios</h2><p>electrician · ecommerce · helpline (vendor/phone-blueprint/scenarios)</p></div>
+<section class="card" id="home">
+<h2>PNL performance — year</h2><div id="pnl"></div>
+<h3>Vault (paper)</h3>
+<input id="amt" type="number" value="100" min="1">
+<button onclick="vop('deposit')">Deposit</button>
+<button onclick="vop('lock')">Lock in contract</button>
+<button onclick="vop('withdraw')">Withdraw (0 fee)</button>
+<p id="bal"></p>
+</section>
+<section class="card" id="thesis" style="display:none">
+<h2 id="t-title"></h2><p id="t-sum"></p>
+<div id="t-chart" style="height:240px"></div>
+<h3>Analysis</h3><div id="t-list"></div>
+<h3>Open position log</h3><div id="t-pos"></div>
+<input id="p-note" placeholder="note"><button onclick="logpos()">Log position</button>
+</section>
 </main>
 <script>
-fetch('/api/inventory').then(r=>r.json()).then(d=>{
-  document.getElementById('inv').innerHTML =
-    Object.entries(d).map(([k,v])=>`<li>${k}: ${v} files</li>`).join('');
-});
+let cur=null, curN=0;
+async function j(u,o){const r=await fetch(u,o);return r.json();}
+async function init(){
+  const th=await j('/api/theses');
+  document.getElementById('tablist').innerHTML =
+    th.map((t,i)=>`<button data-i="${i}">${t.id.slice(-4)} · ${t.theses.length}</button>`).join('');
+  document.querySelectorAll('#tablist button').forEach(b=>b.onclick=()=>show(th[+b.dataset.i],b));
+  const ch=LightweightCharts.createChart(document.getElementById('pnl'),{layout:{background:{color:'transparent'},textColor:'#8b949e'}});
+  const s=ch.addLineSeries();let v=1000;const pts=[];const now=Date.now();
+  for(let i=364;i>=0;i--){v*=1+(Math.random()-0.48)/50;pts.push({time:Math.floor((now-i*864e5)/1000),value:+v.toFixed(2)});}
+  s.setData(pts);bal();
+}
+async function show(t,b){
+  document.querySelectorAll('#tablist button').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  cur=t;document.getElementById('thesis').style.display='block';
+  document.getElementById('t-title').textContent=t.subject.slice(0,90);
+  document.getElementById('t-sum').textContent='';
+  document.getElementById('t-list').innerHTML=t.theses.map((x,i)=>
+    `<p><b>#${x.n} ${x.title}</b> ${x.rating?'· '+x.rating+'/10':''}<br><small>${x.body.slice(0,280)}</small><br><button onclick="pick(${i})">track</button></p>`).join('');
+  pos();
+}
+function pick(i){curN=cur.theses[i].n;logpos('tracking');}
+async function pos(){
+  const p=await j('/api/positions/'+cur.id);
+  document.getElementById('t-pos').innerHTML=p.length?p.map(x=>`<p><small>${x.ts}</small> ${x.action} #${x.thesis_n} ${x.note} [${x.mode}]</p>`).join(''):'<p><small>no positions logged</small></p>';
+}
+async function logpos(a){
+  const note=document.getElementById('p-note').value||'';
+  await fetch(`/api/positions?thesis_id=${cur.id}&thesis_n=${curN||cur.theses[0].n}&action=${encodeURIComponent(a||'note')}&note=${encodeURIComponent(note)}`,{method:'POST'});
+  document.getElementById('p-note').value='';pos();
+}
+async function vop(op){
+  const a=+document.getElementById('amt').value;
+  await fetch(`/api/vault/${op}?amount=${a}`,{method:'POST'});bal();
+}
+async function bal(){const b=await j('/api/vault/balance');document.getElementById('bal').textContent=`paper balance ${b.paper_balance} · ${b.ops} ops · 0 fee`;}
+init();
 </script>
 </body>
 </html>
