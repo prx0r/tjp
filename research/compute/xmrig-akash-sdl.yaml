@@ -1,0 +1,29 @@
+# xmrig on Akash — fill POOL + WALLET, tune cpu.units to L3_MB/2048 threads, then:
+# provider-services tx deployment create xmrig-akash-sdl.yaml --from $AKASH_KEY_NAME
+version: "2.0"
+services:
+  xmrig:
+    image: xmrig/xmrig:latest
+    args: ["-o", "POOL", "-u", "WALLET", "--tls", "--huge-pages-jit", "--randomx-1gb-pages"]
+    expose: []
+profiles:
+  compute:
+    xmrig:
+      resources:
+        cpu:
+          units: 8
+        memory:
+          size: 16Gi
+        storage:
+          size: 1Gi
+  placement:
+    akash:
+      pricing:
+        xmrig:
+          denom: uact
+          amount: 500
+deployment:
+  xmrig:
+    akash:
+      profile: xmrig
+      count: 1
