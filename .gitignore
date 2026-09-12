@@ -4,3 +4,8 @@ __pycache__/
 docs/positions.json
 docs/funnel.json
 docs/falsifiers.json
+docs/safetrade/snapshots/
+docs/safetrade/tape/
+docs/safetrade/report.json
+docs/safetrade/universe_events.jsonl
+docs/safetrade/announcements.json
