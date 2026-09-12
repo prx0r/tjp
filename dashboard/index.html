@@ -21,7 +21,7 @@ input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#
 </head>
 <body>
 <header><h1>tjp — thesis desk <small>paper mode · 0 fee · no real funds</small></h1></header>
-<nav id="tabs"><strong>Theses:</strong> <span id="tablist"></span></nav>
+<nav id="tabs"><strong>Theses:</strong> <span id="tablist"></span> <strong>Trades:</strong> <span id="tradelist"></span></nav>
 <main>
 <section class="card" id="home">
 <h2>PNL performance — year</h2><div id="pnl"></div>
@@ -48,6 +48,9 @@ async function init(){
   document.getElementById('tablist').innerHTML =
     th.map((t,i)=>`<button data-i="${i}">${t.id.slice(-4)} · ${t.theses.length}</button>`).join('');
   document.querySelectorAll('#tablist button').forEach(b=>b.onclick=()=>show(th[+b.dataset.i],b));
+  const g=await j('/api/gold');
+  document.getElementById('tradelist').innerHTML =
+    g.map(x=>`<button title="${x.rationale.slice(0,120)}">${x.trade_id} · ${x.total} ${x.band}</button>`).join('');
   const ch=LightweightCharts.createChart(document.getElementById('pnl'),{layout:{background:{color:'transparent'},textColor:'#8b949e'}});
   const s=ch.addLineSeries();let v=1000;const pts=[];const now=Date.now();
   for(let i=364;i>=0;i--){v*=1+(Math.random()-0.48)/50;pts.push({time:Math.floor((now-i*864e5)/1000),value:+v.toFixed(2)});}

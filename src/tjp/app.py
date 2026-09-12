@@ -64,3 +64,28 @@ def vault_balance() -> dict:
     from . import vault
 
     return vault.balance()
+
+
+@app.get("/api/trades")
+def trades() -> list:
+    import json
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parent.parent.parent
+    d = json.loads((base / "vendor" / "thesisdesk" / "data" / "trades.json").read_text())
+    return d.get("trades", [])
+
+
+@app.get("/api/gold")
+def gold() -> list:
+    import json
+    from pathlib import Path
+
+    from .gold import score
+
+    base = Path(__file__).resolve().parent.parent.parent
+    out = []
+    for f in sorted((base / "docs" / "gold").glob("*.json")):
+        a = json.loads(f.read_text())
+        out.append({"trade_id": a["trade_id"], "seed": a["band_seed"], "rationale": a["rationale"], **score(a["factors"])})
+    return out
