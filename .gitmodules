@@ -1,0 +1,6 @@
+[submodule "research/mining/xmrig"]
+	path = research/mining/xmrig
+	url = https://github.com/xmrig/xmrig.git
+[submodule "research/mining/RandomX"]
+	path = research/mining/RandomX
+	url = https://github.com/tevador/RandomX.git
