@@ -16,4 +16,5 @@ def test_gold_bands():
     assert score({"scarcity_migration": 1, "valuation_convexity": 1, "catalyst_proximity": 1, "reflexivity": 1, "liquidity_access": 1, "narrative_compression": 1, "falsifiability": 1})["band"] == "GOLD"
     assert score({})["band"] == "RESEARCH"
     r = c.get("/api/gold").json()
-    assert all(x["band"] == "GOLD" for x in r) and len(r) == 2
+    bands = {x["trade_id"]: x["band"] for x in r}
+    assert bands == {"nil-010": "GOLD", "xmr-zec": "READY"}
