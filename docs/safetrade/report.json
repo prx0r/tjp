@@ -1,0 +1,197 @@
+{
+ "listings": [
+  {
+   "asset": "PRL",
+   "announced": "2026-05-20T18:18:28Z",
+   "t0_note": "announcement; chat cited May 23 trade-live \u2014 verify executable first ask"
+  },
+  {
+   "asset": "TSC",
+   "announced": "2026-08-17T22:02:23Z",
+   "t0_note": null
+  },
+  {
+   "asset": "MDS",
+   "announced": "2026-07-17T22:21:00Z",
+   "t0_note": null
+  },
+  {
+   "asset": "CNX",
+   "announced": "2026-07-17T22:18:15Z",
+   "t0_note": null
+  },
+  {
+   "asset": "CSD",
+   "announced": "2026-07-09T17:11:37Z",
+   "t0_note": null
+  },
+  {
+   "asset": "MDL",
+   "announced": "2026-07-07T00:39:39Z",
+   "t0_note": null
+  },
+  {
+   "asset": "SAT",
+   "announced": "2026-07-03T18:51:58Z",
+   "t0_note": "relist"
+  },
+  {
+   "asset": "KRGN",
+   "announced": "2026-04-11T01:08:42Z",
+   "t0_note": null
+  },
+  {
+   "asset": "LDG",
+   "announced": "2026-04-09T23:53:33Z",
+   "t0_note": null
+  },
+  {
+   "asset": "SNAP",
+   "announced": "2026-02-04T19:19:08Z",
+   "t0_note": null
+  },
+  {
+   "asset": "CPAY",
+   "announced": "2026-01-20T18:25:44Z",
+   "t0_note": null
+  },
+  {
+   "asset": "VE",
+   "announced": "2026-01-20T18:22:30Z",
+   "t0_note": null
+  },
+  {
+   "asset": "NOID",
+   "announced": "2026-08-31T20:17:32Z",
+   "t0_note": null
+  },
+  {
+   "asset": "QUAN",
+   "announced": "2026-09-09T22:06:00Z",
+   "t0_note": "from announcement snippet"
+  },
+  {
+   "asset": "XTM",
+   "announced": null,
+   "t0_note": "article only, timestamp TBD"
+  }
+ ],
+ "multiples": [],
+ "gates": [
+  {
+   "asset": "PRL",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "TSC",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "MDS",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "CNX",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "CSD",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "MDL",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "SAT",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "KRGN",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "LDG",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "SNAP",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "CPAY",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "VE",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "NOID",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "QUAN",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  },
+  {
+   "asset": "XTM",
+   "buy_candidate": false,
+   "passed": 0,
+   "of": 10,
+   "note": "evidence TBD per listing"
+  }
+ ],
+ "cohort": {
+  "n": 0,
+  "median": 0.0,
+  "p2x": 0.0,
+  "p5x": 0.0,
+  "p10x": 0.0,
+  "p50x": 0.0,
+  "zeroed": 0.0
+ },
+ "note": "multiples empty until mcap-at-T0 + peak captured per listing"
+}

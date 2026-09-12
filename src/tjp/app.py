@@ -130,7 +130,8 @@ def catalyst_list() -> list:
 
 
 @app.get("/api/snapshots/latest")
-def snapshot_latest() -> dict:    import json
+def snapshot_latest() -> dict:
+    import json
     from pathlib import Path
 
     base = Path(__file__).resolve().parent.parent.parent
