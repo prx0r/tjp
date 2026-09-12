@@ -34,7 +34,6 @@ input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#
 </section>
 <section class="card" id="thesis" style="display:none">
 <h2 id="t-title"></h2><p id="t-sum"></p>
-<div id="t-chart" style="height:240px"></div>
 <h3>Analysis</h3><div id="t-list"></div>
 <h3>Open position log</h3><div id="t-pos"></div>
 <input id="p-note" placeholder="note"><button onclick="logpos()">Log position</button>
@@ -54,8 +53,24 @@ async function init(){
     th.map((t,i)=>`<button data-i="${i}">${t.id.slice(-4)} · ${t.theses.length}</button>`).join('');
   document.querySelectorAll('#tablist button').forEach(b=>b.onclick=()=>show(th[+b.dataset.i],b));
   const g=await j('/api/gold');
+  window._gold=g;
   document.getElementById('tradelist').innerHTML =
-    g.map(x=>`<button title="${x.rationale.slice(0,120)}">${x.trade_id} · ${x.total} ${x.band}</button>`).join('');
+    g.map((x,i)=>`<button onclick="showTrade(${i})">${x.trade_id} · ${x.total} ${x.band}</button>`).join('');
+async function showTrade(i){
+  const x=window._gold[i];
+  document.getElementById('thesis').style.display='block';
+  document.getElementById('t-title').textContent=`${x.trade_id} — ${x.total} ${x.band}`;
+  document.getElementById('t-sum').textContent=x.rationale;
+  document.getElementById('t-list').innerHTML=Object.entries(x.parts).map(([k,v])=>`<p>${k}: <b>${v}</b></p>`).join('');
+  const f=await j('/api/falsifiers/'+x.trade_id);
+  document.getElementById('t-pos').innerHTML=f.map((y,idx)=>`<p>${y.text.slice(0,120)}… [<b>${y.status}</b>] <button onclick="flipF('${x.trade_id}',${idx})">flip</button></p>`).join('')||'<p><small>no falsifiers listed</small></p>';
+  window._ftrade=x.trade_id;
+}
+async function flipF(tid,idx){
+  const cur=(await j('/api/falsifiers/'+tid))[idx].status;
+  const nx=cur==='open'?'triggered':'open';
+  await fetch(`/api/falsifiers/${tid}/${idx}?status=${nx}`,{method:'POST'});showTrade(window._gold.findIndex(x=>x.trade_id===tid));
+}
   const ch=LightweightCharts.createChart(document.getElementById('pnl'),{layout:{background:{color:'transparent'},textColor:'#8b949e'}});
   const s=ch.addLineSeries();let v=1000;const pts=[];const now=Date.now();
   for(let i=364;i>=0;i--){v*=1+(Math.random()-0.48)/50;pts.push({time:Math.floor((now-i*864e5)/1000),value:+v.toFixed(2)});}
