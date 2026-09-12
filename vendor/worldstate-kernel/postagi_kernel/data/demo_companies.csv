@@ -1,0 +1,37 @@
+ticker,name,sector,cashflow_duration,technological_duration,evidence_confidence,exp_agentic_labor,exp_autonomous_science,exp_compute_explosion,exp_physical_bottlenecks,exp_bio_design,exp_software_rent_compression
+MSFT,Microsoft,Software/Cloud,1.3,1.2,0.90,0.35,0.15,0.55,0.10,0.05,-0.15
+GOOGL,Alphabet,Internet/Cloud,1.3,1.3,0.88,0.30,0.20,0.50,0.05,0.05,-0.10
+AMZN,Amazon,Cloud/Commerce,1.2,1.0,0.90,0.25,0.10,0.50,0.15,0.00,-0.05
+META,Meta Platforms,Internet/AI,1.2,1.1,0.88,0.25,0.10,0.35,0.05,0.00,-0.05
+ORCL,Oracle,Enterprise Software/Cloud,1.4,1.4,0.83,0.05,0.00,0.30,0.10,0.00,-0.35
+CRM,Salesforce,Enterprise Software,1.6,1.7,0.83,-0.05,0.00,0.10,0.00,0.00,-0.55
+NOW,ServiceNow,Enterprise Software,1.6,1.6,0.82,0.05,0.00,0.15,0.00,0.00,-0.45
+ADBE,Adobe,Software,1.6,1.7,0.82,0.05,0.05,0.05,0.00,0.00,-0.50
+INTU,Intuit,Software,1.5,1.6,0.80,-0.10,0.00,0.05,0.00,0.00,-0.45
+ACN,Accenture,IT Services,1.2,1.4,0.85,-0.50,0.00,0.05,0.00,0.00,-0.20
+EPAM,EPAM Systems,IT Services,1.3,1.5,0.80,-0.55,0.00,0.05,0.00,0.00,-0.20
+NVDA,NVIDIA,Semiconductors,1.1,0.9,0.92,0.20,0.20,0.90,0.55,0.10,0.00
+AMD,AMD,Semiconductors,1.1,1.0,0.86,0.10,0.10,0.75,0.35,0.05,0.00
+AVGO,Broadcom,Semiconductors/Networking,1.2,0.9,0.90,0.10,0.05,0.70,0.55,0.00,0.00
+TSM,TSMC,Semiconductor Foundry,1.1,0.7,0.92,0.10,0.15,0.75,0.70,0.05,0.00
+ASML,ASML,Semiconductor Equipment,1.2,0.6,0.94,0.05,0.10,0.65,0.90,0.00,0.00
+AMAT,Applied Materials,Semiconductor Equipment,1.1,0.7,0.90,0.05,0.10,0.60,0.75,0.00,0.00
+LRCX,Lam Research,Semiconductor Equipment,1.1,0.7,0.89,0.05,0.10,0.60,0.75,0.00,0.00
+KLAC,KLA,Semiconductor Equipment,1.1,0.7,0.90,0.05,0.10,0.60,0.80,0.00,0.00
+COHR,Coherent,Photonics,1.0,0.8,0.82,0.05,0.05,0.60,0.75,0.00,0.00
+LITE,Lumentum,Photonics,1.0,0.8,0.82,0.05,0.05,0.65,0.75,0.00,0.00
+VRT,Vertiv,Datacenter Infrastructure,0.9,0.5,0.90,0.05,0.00,0.70,0.95,0.00,0.00
+ETN,Eaton,Electrical Equipment,0.8,0.4,0.91,0.05,0.00,0.55,0.90,0.00,0.00
+PWR,Quanta Services,Grid Infrastructure,0.8,0.4,0.88,0.05,0.00,0.45,0.90,0.00,0.00
+CEG,Constellation Energy,Power Generation,0.8,0.3,0.88,0.00,0.00,0.60,0.85,0.00,0.00
+VST,Vistra,Power Generation,0.8,0.3,0.86,0.00,0.00,0.60,0.80,0.00,0.00
+CCJ,Cameco,Uranium,0.8,0.3,0.80,0.00,0.00,0.45,0.75,0.00,0.00
+BWXT,BWX Technologies,Nuclear Components,0.9,0.4,0.80,0.00,0.05,0.40,0.80,0.00,0.00
+TMO,Thermo Fisher Scientific,Life Science Tools,1.0,0.8,0.86,0.00,0.65,0.15,0.20,0.50,0.00
+DHR,Danaher,Life Science Tools,1.0,0.8,0.86,0.00,0.60,0.10,0.15,0.45,0.00
+RXRX,Recursion Pharmaceuticals,AI Drug Discovery,1.6,1.5,0.67,0.05,0.75,0.20,0.00,0.80,0.00
+CRSP,CRISPR Therapeutics,Biotechnology,1.7,1.5,0.65,0.00,0.55,0.05,0.00,0.75,0.00
+ILMN,Illumina,Genomics Tools,1.2,1.0,0.80,0.00,0.55,0.10,0.10,0.55,0.00
+ADP,Automatic Data Processing,Payroll Services,1.4,1.3,0.78,-0.25,0.00,0.05,0.00,0.00,-0.25
+PAYX,Paychex,Payroll Services,1.4,1.3,0.76,-0.25,0.00,0.05,0.00,0.00,-0.25
+GLOB,Globant,IT Services,1.3,1.5,0.75,-0.55,0.00,0.05,0.00,0.00,-0.20

@@ -1,0 +1,41 @@
+{
+  "inspected_repositories": [
+    {
+      "name": "yecchen/MIRAI",
+      "url": "https://github.com/yecchen/MIRAI.git",
+      "ref": "badda88c4ddc48992708c783d684a3feebf15a61",
+      "use": "temporal event forecasting benchmark / agent retrieval contract",
+      "vendored": false
+    },
+    {
+      "name": "snap-stanford/supply-chains",
+      "url": "https://github.com/snap-stanford/supply-chains.git",
+      "branch": "tgb",
+      "ref": "9283f085bc3ecd23dea0b13f437f5d08ceffb106",
+      "use": "SC-TGN / SC-GraphMixer inventory-production-function reference",
+      "vendored": false
+    },
+    {
+      "name": "songma/patent-firm-link-share",
+      "url": "https://github.com/songma/patent-firm-link-share.git",
+      "ref": "17f2f473a878036dfa8c87fdf969ac835b6edd24",
+      "use": "public patent-to-firm linkage and published obsolescence panel",
+      "vendored": false
+    },
+    {
+      "name": "kernc/backtesting.py",
+      "url": "https://github.com/kernc/backtesting.py.git",
+      "ref": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+      "use": "optional external event-driven backtest cross-check",
+      "vendored": false
+    },
+    {
+      "name": "microsoft/qlib",
+      "url": "https://github.com/microsoft/qlib.git",
+      "ref": "79633dd9506ea689e5400dea0197717b5b3d74b7",
+      "use": "optional institutional-style dataset/backtest workflow cross-check",
+      "vendored": false
+    }
+  ],
+  "note": "The build environment had no direct outbound git DNS. Repositories were inspected and commit-pinned through the connected GitHub service. They are intentionally not redistributed in this ZIP; bootstrap_external.sh clones the exact refs in any normal internet-connected environment."
+}

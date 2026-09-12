@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tjp — thesis desk</title>
+<script src="lightweight-charts.js"></script>
+<style>
+body{font-family:system-ui,sans-serif;background:#0e1116;color:#e6e6e6;margin:0}
+header{padding:20px 28px;border-bottom:1px solid #222}
+main{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px 28px}
+.card{background:#161b22;border:1px solid #262c36;border-radius:10px;padding:16px}
+#chart{height:280px}
+ul{padding-left:18px;font-size:14px}
+</style>
+</head>
+<body>
+<header><h1>tjp — thesis desk</h1><p>phone blueprint · worldstate kernel · memo theses</p></header>
+<main>
+<div class="card"><h2>Scores</h2><div id="chart"></div></div>
+<div class="card"><h2>Inventory</h2><ul id="inv"></ul></div>
+<div class="card"><h2>Theses</h2><p>memo extraction lands with thesisdesk.zip</p></div>
+<div class="card"><h2>Scenarios</h2><p>electrician · ecommerce · helpline (vendor/phone-blueprint/scenarios)</p></div>
+</main>
+<script>
+fetch('/api/inventory').then(r=>r.json()).then(d=>{
+  document.getElementById('inv').innerHTML =
+    Object.entries(d).map(([k,v])=>`<li>${k}: ${v} files</li>`).join('');
+});
+</script>
+</body>
+</html>

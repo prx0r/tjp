@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tjp"
+version = "0.1.0"
+description = "Thesis desk — webapp over phone-agent blueprint, worldstate kernel, thesis memos"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.104",
+  "uvicorn>=0.24",
+  "pydantic>=2.5",
+  "pyyaml>=6.0",
+  "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.1"]
+
+[project.scripts]
+tjp = "tjp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

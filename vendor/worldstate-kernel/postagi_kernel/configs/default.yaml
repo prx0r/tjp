@@ -1,0 +1,37 @@
+scenarios:
+  - id: agentic_labor
+    name: Agentic digital labor becomes abundant
+    horizon_years: 2
+    our_probability: 0.82
+    market_probability: 0.55
+    description: Software agents automate substantial knowledge-work workflows.
+  - id: autonomous_science
+    name: Autonomous science materially accelerates discovery
+    horizon_years: 3
+    our_probability: 0.68
+    market_probability: 0.38
+    description: AI closes meaningful portions of hypothesis-experiment-analysis loops.
+  - id: compute_explosion
+    name: Inference and agent compute demand explodes
+    horizon_years: 2
+    our_probability: 0.88
+    market_probability: 0.70
+    description: Agentic workloads expand datacenter compute, networking and power demand.
+  - id: physical_bottlenecks
+    name: Physical bottlenecks dominate marginal value
+    horizon_years: 4
+    our_probability: 0.76
+    market_probability: 0.46
+    description: Power, cooling, fabs, optics, grid equipment and scarce inputs bind growth.
+  - id: bio_design
+    name: AI materially compresses bio discovery cycles
+    horizon_years: 5
+    our_probability: 0.58
+    market_probability: 0.32
+    description: Models and autonomous labs shorten parts of therapeutic and biological design.
+  - id: software_rent_compression
+    name: Commodity software rents compress
+    horizon_years: 3
+    our_probability: 0.74
+    market_probability: 0.45
+    description: Replicable agent-built software weakens some incumbent workflow pricing power.

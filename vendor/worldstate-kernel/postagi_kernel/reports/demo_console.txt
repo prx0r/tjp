@@ -1,0 +1,38 @@
+ticker                      name                    sector  world_divergence  obsolescence  convergence  patentomics  total_score        direction
+  RXRX Recursion Pharmaceuticals         AI Drug Discovery          0.267856         -0.10         0.75         0.70     0.309821      beneficiary
+  NVDA                    NVIDIA            Semiconductors          0.258983         -0.15         0.80         0.70     0.302441      beneficiary
+  CRSP       CRISPR Therapeutics             Biotechnology          0.196387         -0.05         0.60         0.65     0.253013      beneficiary
+  ASML                      ASML   Semiconductor Equipment          0.206930         -0.15         0.75         0.55     0.251311      beneficiary
+   TSM                      TSMC     Semiconductor Foundry          0.208114         -0.10         0.70         0.50     0.249463      beneficiary
+   TMO  Thermo Fisher Scientific        Life Science Tools          0.170135         -0.05         0.65         0.55     0.236074      beneficiary
+  AVGO                  Broadcom Semiconductors/Networking          0.188383         -0.05         0.60         0.50     0.233611      beneficiary
+  ILMN                  Illumina            Genomics Tools          0.164509          0.05         0.55         0.50     0.232980      beneficiary
+   AMD                       AMD            Semiconductors          0.171738         -0.05         0.65         0.45     0.226956      beneficiary
+  KLAC                       KLA   Semiconductor Equipment          0.180820         -0.05         0.60         0.40     0.219451      beneficiary
+   DHR                   Danaher        Life Science Tools          0.148202         -0.05         0.60         0.50     0.211511      beneficiary
+  LITE                  Lumentum                 Photonics          0.157517          0.00         0.60         0.30     0.206634      beneficiary
+  AMAT         Applied Materials   Semiconductor Equipment          0.174745         -0.05         0.55         0.35     0.203609      beneficiary
+  LRCX              Lam Research   Semiconductor Equipment          0.172803         -0.05         0.55         0.35     0.202542      beneficiary
+   VRT                    Vertiv Datacenter Infrastructure          0.151919         -0.05         0.70         0.20     0.198555      beneficiary
+  COHR                  Coherent                 Photonics          0.152820          0.00         0.55         0.30     0.196551      beneficiary
+ GOOGL                  Alphabet            Internet/Cloud          0.174033         -0.05         0.50         0.35     0.195718      beneficiary
+  MSFT                 Microsoft            Software/Cloud          0.178318         -0.10         0.45         0.30     0.175575      beneficiary
+   ETN                     Eaton      Electrical Equipment          0.117144         -0.05         0.55         0.10     0.146929      beneficiary
+  AMZN                    Amazon            Cloud/Commerce          0.141390          0.00         0.30         0.20     0.142765      beneficiary
+   PWR           Quanta Services       Grid Infrastructure          0.106562          0.00         0.45         0.05     0.131109      beneficiary
+  META            Meta Platforms               Internet/AI          0.110031         -0.05         0.35         0.25     0.128017      beneficiary
+   CEG      Constellation Energy          Power Generation          0.098672          0.00         0.40         0.00     0.114270      beneficiary
+  BWXT          BWX Technologies        Nuclear Components          0.093377         -0.05         0.40         0.10     0.111358      beneficiary
+   VST                    Vistra          Power Generation          0.092882          0.00         0.35         0.00     0.103585      beneficiary
+   CCJ                    Cameco                   Uranium          0.074701          0.00         0.30         0.00     0.086086      beneficiary
+  ORCL                    Oracle Enterprise Software/Cloud          0.004797          0.25        -0.10         0.05     0.042639      beneficiary
+   NOW                ServiceNow       Enterprise Software         -0.061279          0.25         0.05         0.10     0.033797      beneficiary
+  ADBE                     Adobe                  Software         -0.080024          0.40        -0.10         0.10     0.030987      beneficiary
+  INTU                    Intuit                  Software         -0.109209          0.35        -0.10         0.05    -0.000065 cashflow_at_risk
+   CRM                Salesforce       Enterprise Software         -0.121756          0.45        -0.20         0.00    -0.006966 cashflow_at_risk
+  PAYX                   Paychex          Payroll Services         -0.085387          0.20        -0.10         0.00    -0.021963 cashflow_at_risk
+   ACN                 Accenture               IT Services         -0.135453          0.45        -0.25         0.00    -0.021999 cashflow_at_risk
+   ADP Automatic Data Processing          Payroll Services         -0.087634          0.20        -0.10         0.00    -0.023199 cashflow_at_risk
+  GLOB                   Globant               IT Services         -0.138734          0.45        -0.25         0.00    -0.023804 cashflow_at_risk
+  EPAM              EPAM Systems               IT Services         -0.147983          0.50        -0.30         0.00    -0.026391 cashflow_at_risk
+{'annualized_return': 0.0877208132760614, 'annualized_vol': 0.06422176368172651, 'sharpe': 1.3659047688380637, 'max_drawdown': -0.08368220373371127, 'periods': 84, 'cost_bps': 10}

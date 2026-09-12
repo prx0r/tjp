@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhoneCandidate",
+  "type": "object",
+  "required": [
+    "phone_number",
+    "phone_number_type",
+    "features",
+    "reservable",
+    "score"
+  ],
+  "properties": {
+    "phone_number": {
+      "type": "string",
+      "pattern": "^\\+[1-9][0-9]+$"
+    },
+    "display": {
+      "type": "string"
+    },
+    "phone_number_type": {
+      "enum": [
+        "local",
+        "national",
+        "mobile",
+        "toll_free",
+        "landline",
+        "shared_cost",
+        "other"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reservable": {
+      "type": "boolean"
+    },
+    "cost_information": {
+      "type": "object"
+    },
+    "region_information": {
+      "type": "array"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "score_components": {
+      "type": "object"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "downsides": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "compliance_state": {
+      "enum": [
+        "READY",
+        "MISSING_DOCUMENTS",
+        "PHYSICAL_PRESENCE_BLOCK",
+        "REVIEW_REQUIRED",
+        "UNKNOWN_RECHECK_PROVIDER"
+      ]
+    }
+  }
+}

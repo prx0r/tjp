@@ -1,0 +1,37 @@
+ticker,name,sector,world_divergence,obsolescence,convergence,patentomics,total_score,direction
+NVDA,NVIDIA,Semiconductors,0.25898334362101705,-0.15,0.8,0.7,0.3624408389915594,beneficiary
+RXRX,Recursion Pharmaceuticals,AI Drug Discovery,0.2678561760282563,-0.1,0.75,0.7,0.34982089681554096,beneficiary
+ASML,ASML,Semiconductor Equipment,0.20692985979537112,-0.15,0.75,0.55,0.3113114228874541,beneficiary
+TSM,TSMC,Semiconductor Foundry,0.2081143533732058,-0.1,0.7,0.5,0.2894628943552632,beneficiary
+CRSP,CRISPR Therapeutics,Biotechnology,0.19638674283223737,-0.05,0.6,0.65,0.2730127085577305,beneficiary
+TMO,Thermo Fisher Scientific,Life Science Tools,0.17013522562123246,-0.05,0.65,0.55,0.2560743740916779,beneficiary
+AVGO,Broadcom,Semiconductors/Networking,0.18838347402361996,-0.05,0.6,0.5,0.25361091071299097,beneficiary
+AMD,AMD,Semiconductors,0.17173758178257628,-0.05,0.65,0.45,0.246955669980417,beneficiary
+KLAC,KLA,Semiconductor Equipment,0.18081952541178198,-0.05,0.6,0.4,0.23945073897648012,beneficiary
+DHR,Danaher,Life Science Tools,0.14820161996027487,-0.05,0.6,0.5,0.2315108909781512,beneficiary
+AMAT,Applied Materials,Semiconductor Equipment,0.17474452541178198,-0.05,0.55,0.35,0.22360948897648011,beneficiary
+LRCX,Lam Research,Semiconductor Equipment,0.17280291957387328,-0.05,0.55,0.35,0.22254160576563034,beneficiary
+VRT,Vertiv,Datacenter Infrastructure,0.15191907946457972,-0.05,0.7,0.2,0.21855549370551886,beneficiary
+GOOGL,Alphabet,Internet/Cloud,0.17403316750165343,-0.05,0.5,0.35,0.21571824212590937,beneficiary
+MSFT,Microsoft,Software/Cloud,0.17831808484299097,-0.1,0.45,0.3,0.21557494666364505,beneficiary
+ILMN,Illumina,Genomics Tools,0.16450918935804332,0.05,0.55,0.5,0.21298005414692384,beneficiary
+LITE,Lumentum,Photonics,0.15751701446922434,0.0,0.6,0.3,0.2066343579580734,beneficiary
+COHR,Coherent,Photonics,0.1528204112285833,0.0,0.55,0.3,0.19655122617572082,beneficiary
+ETN,Eaton,Electrical Equipment,0.11714403403438371,-0.05,0.55,0.1,0.1669292187189111,beneficiary
+META,Meta Platforms,Internet/AI,0.11003108048669105,-0.05,0.35,0.25,0.1480170942676801,beneficiary
+AMZN,Amazon,Cloud/Commerce,0.14139006473722726,0.0,0.3,0.2,0.142764535605475,beneficiary
+BWXT,BWX Technologies,Nuclear Components,0.09337740998730344,-0.05,0.4,0.1,0.1313575754930169,beneficiary
+PWR,Quanta Services,Grid Infrastructure,0.10656179995408399,0.0,0.45,0.05,0.1311089899747462,beneficiary
+CEG,Constellation Energy,Power Generation,0.09867188566618323,0.0,0.4,0.0,0.11426953711640078,beneficiary
+VST,Vistra,Power Generation,0.0928818428101336,0.0,0.35,0.0,0.10358501354557348,beneficiary
+CCJ,Cameco,Uranium,0.07470128568148857,0.0,0.3,0.0,0.08608570712481872,beneficiary
+ORCL,Oracle,Enterprise Software/Cloud,0.0047974975833348175,0.25,-0.1,0.05,-0.05736137632916585,cashflow_at_risk
+NOW,ServiceNow,Enterprise Software,-0.061278777764442606,0.25,0.05,0.1,-0.06620332777044344,cashflow_at_risk
+PAYX,Paychex,Payroll Services,-0.08538745588726807,0.2,-0.1,0.0,-0.10196310073799746,cashflow_at_risk
+ADP,Automatic Data Processing,Payroll Services,-0.08763449420009091,0.2,-0.1,0.0,-0.10319897181005001,cashflow_at_risk
+ADBE,Adobe,Software,-0.0800240406614918,0.4,-0.1,0.1,-0.1290132223638205,cashflow_at_risk
+INTU,Intuit,Software,-0.109209443916349,0.35,-0.1,0.05,-0.14006519415399193,cashflow_at_risk
+CRM,Salesforce,Enterprise Software,-0.12175592807224579,0.45,-0.2,0.0,-0.1869657604397352,cashflow_at_risk
+ACN,Accenture,IT Services,-0.13545285589696604,0.45,-0.25,0.0,-0.20199907074333134,cashflow_at_risk
+GLOB,Globant,IT Services,-0.1387340971679477,0.45,-0.25,0.0,-0.20380375344237125,cashflow_at_risk
+EPAM,EPAM Systems,IT Services,-0.14798303697914422,0.5,-0.3,0.0,-0.22639067033852933,cashflow_at_risk

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BusinessPhoneIntent",
+  "type": "object",
+  "required": [
+    "country",
+    "business_name",
+    "business_model",
+    "customer_type",
+    "primary_channels"
+  ],
+  "properties": {
+    "country": {
+      "const": "GB"
+    },
+    "business_name": {
+      "type": "string"
+    },
+    "business_model": {
+      "type": "string",
+      "enum": [
+        "local_service",
+        "regional_service",
+        "national_service",
+        "ecommerce",
+        "saas",
+        "professional_service",
+        "personal_brand",
+        "support_helpline",
+        "marketplace",
+        "other"
+      ]
+    },
+    "customer_type": {
+      "type": "string",
+      "enum": [
+        "consumer",
+        "business",
+        "mixed"
+      ]
+    },
+    "headquarters_city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "service_locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "locality_is_purchase_signal": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "trust_sensitivity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "expected_expansion": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "national_identity_value": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "free_to_caller_value": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "cost_sensitivity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "primary_channels": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "voice_inbound",
+          "voice_outbound",
+          "sms",
+          "whatsapp"
+        ]
+      }
+    },
+    "same_number_sms_required": {
+      "type": "boolean"
+    },
+    "monthly_number_budget_gbp": {
+      "type": "number",
+      "minimum": 0
+    },
+    "physical_presence_in_uk_at_purchase": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "regulatory_documents_state": {
+      "enum": [
+        "ready",
+        "partial",
+        "missing",
+        "unknown"
+      ]
+    }
+  }
+}
