@@ -26,4 +26,4 @@ def test_catalysts_and_snapshot_shape():
     cal = c.get("/api/catalysts").json()
     assert any("2027-02-18" in x["date"] for x in cal if x["date"])
     s = c.get("/api/snapshots/latest").json()
-    assert s["ok"] is True and "monero" in s["prices"]
+    assert s["ok"] is True and "PRL/USDT" in s["prices"]

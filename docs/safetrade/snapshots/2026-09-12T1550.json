@@ -1,0 +1,870 @@
+{
+ "ts": "2026-09-12T15:50:11.526283+00:00",
+ "n": 96,
+ "rows": [
+  {
+   "pair": "AQUA/BTC",
+   "last": 1e-07,
+   "chg_24h": "+0.00%",
+   "high": 1e-07,
+   "low": 1e-07,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "ARB/USDT",
+   "last": 0.14,
+   "chg_24h": "-6.67%",
+   "high": 0.15,
+   "low": 0.14,
+   "amount_24h": 246.86,
+   "volume_24h": 34.76
+  },
+  {
+   "pair": "ARRR/USDT",
+   "last": 0.2492,
+   "chg_24h": "+0.00%",
+   "high": 0.2492,
+   "low": 0.2492,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "AVAX/USDT",
+   "last": 7.7,
+   "chg_24h": "-13.48%",
+   "high": 8.89999995,
+   "low": 7.6,
+   "amount_24h": 9.54,
+   "volume_24h": 82.77
+  },
+  {
+   "pair": "BNB/USDT",
+   "last": 784.81,
+   "chg_24h": "+3.40%",
+   "high": 786.95,
+   "low": 757.0,
+   "amount_24h": 0.96,
+   "volume_24h": 731.45
+  },
+  {
+   "pair": "BTC/USDT",
+   "last": 77359.4,
+   "chg_24h": "-0.56%",
+   "high": 79071.9,
+   "low": 70003.8,
+   "amount_24h": 0.23,
+   "volume_24h": 17394.29
+  },
+  {
+   "pair": "BTCZ/SAFE",
+   "last": 0.0003,
+   "chg_24h": "+0.00%",
+   "high": 0.0003,
+   "low": 0.0003,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "BTCZ/USDT",
+   "last": 2.272e-05,
+   "chg_24h": "+0.62%",
+   "high": 2.272e-05,
+   "low": 2.251e-05,
+   "amount_24h": 5918009.4,
+   "volume_24h": 133.39
+  },
+  {
+   "pair": "CFB/USDT",
+   "last": 1.25e-06,
+   "chg_24h": "+25.00%",
+   "high": 1.25e-06,
+   "low": 1e-06,
+   "amount_24h": 52859678.8,
+   "volume_24h": 58.45
+  },
+  {
+   "pair": "CLORE/USDT",
+   "last": 0.00103086,
+   "chg_24h": "-25.30%",
+   "high": 0.00137999,
+   "low": 0.00103005,
+   "amount_24h": 560770.51,
+   "volume_24h": 673.21
+  },
+  {
+   "pair": "CNX/USDT",
+   "last": 0.0008,
+   "chg_24h": "+0.00%",
+   "high": 0.0008,
+   "low": 0.0008,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "CPAY/USDT",
+   "last": 0.00037002,
+   "chg_24h": "-7.50%",
+   "high": 0.00043355,
+   "low": 0.00037001,
+   "amount_24h": 86656.4,
+   "volume_24h": 33.68
+  },
+  {
+   "pair": "CSD/USDT",
+   "last": 0.01,
+   "chg_24h": "+0.00%",
+   "high": 0.01,
+   "low": 0.01,
+   "amount_24h": 1054.66,
+   "volume_24h": 10.55
+  },
+  {
+   "pair": "DAI/USDT",
+   "last": 0.9999,
+   "chg_24h": "+0.00%",
+   "high": 0.9999,
+   "low": 0.9999,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "DOGE/BTC",
+   "last": 1.14e-06,
+   "chg_24h": "+0.88%",
+   "high": 1.14e-06,
+   "low": 1.12e-06,
+   "amount_24h": 2472.87,
+   "volume_24h": 0.002818
+  },
+  {
+   "pair": "DRGX/BTC",
+   "last": 9e-07,
+   "chg_24h": "+0.00%",
+   "high": 9e-07,
+   "low": 9e-07,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "ETH/BTC",
+   "last": 0.032844,
+   "chg_24h": "-0.58%",
+   "high": 0.033034,
+   "low": 0.031413,
+   "amount_24h": 2.23,
+   "volume_24h": 0.070254
+  },
+  {
+   "pair": "EVR/RVN",
+   "last": 0.0023,
+   "chg_24h": "+0.00%",
+   "high": 0.0023,
+   "low": 0.0023,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "EVR/SAFE",
+   "last": 0.0002,
+   "chg_24h": "+0.00%",
+   "high": 0.0002,
+   "low": 0.0002,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "EVR/USDT",
+   "last": 1.206e-05,
+   "chg_24h": "-7.23%",
+   "high": 1.3e-05,
+   "low": 1.206e-05,
+   "amount_24h": 199240.85,
+   "volume_24h": 2.4
+  },
+  {
+   "pair": "FLUX/BTC",
+   "last": 5.8e-07,
+   "chg_24h": "+0.00%",
+   "high": 5.8e-07,
+   "low": 5.8e-07,
+   "amount_24h": 29.09,
+   "volume_24h": 1.7e-05
+  },
+  {
+   "pair": "GNK/USDT",
+   "last": 0.15,
+   "chg_24h": "+0.00%",
+   "high": 0.15,
+   "low": 0.14,
+   "amount_24h": 41332.33,
+   "volume_24h": 6199.14
+  },
+  {
+   "pair": "GRC/USDT",
+   "last": 0.00690922,
+   "chg_24h": "+6.21%",
+   "high": 0.0088,
+   "low": 0.00650005,
+   "amount_24h": 3770.47,
+   "volume_24h": 27.95
+  },
+  {
+   "pair": "HEX/USDT",
+   "last": 0.0023571,
+   "chg_24h": "+0.00%",
+   "high": 0.0023571,
+   "low": 0.0023571,
+   "amount_24h": 49351.46,
+   "volume_24h": 116.33
+  },
+  {
+   "pair": "KCN/USDT",
+   "last": 2.5,
+   "chg_24h": "-0.01%",
+   "high": 4.000002,
+   "low": 2.5,
+   "amount_24h": 4.3,
+   "volume_24h": 12.39
+  },
+  {
+   "pair": "KRGN/USDT",
+   "last": 0.0076,
+   "chg_24h": "-1.30%",
+   "high": 0.0077,
+   "low": 0.0076,
+   "amount_24h": 5299.19,
+   "volume_24h": 40.62
+  },
+  {
+   "pair": "KV5/USDT",
+   "last": 0.0006,
+   "chg_24h": "-14.29%",
+   "high": 0.0007,
+   "low": 0.0006,
+   "amount_24h": 3918.77,
+   "volume_24h": 2.65
+  },
+  {
+   "pair": "LAX/USDT",
+   "last": 0.008,
+   "chg_24h": "+0.00%",
+   "high": 0.008,
+   "low": 0.006,
+   "amount_24h": 26100.05,
+   "volume_24h": 207.76
+  },
+  {
+   "pair": "LDG/USDT",
+   "last": 0.0001,
+   "chg_24h": "+0.00%",
+   "high": 0.0001,
+   "low": 0.0001,
+   "amount_24h": 10000.0,
+   "volume_24h": 1.0
+  },
+  {
+   "pair": "LTC/BTC",
+   "last": 0.00070294,
+   "chg_24h": "+3.08%",
+   "high": 0.00070294,
+   "low": 0.00068194,
+   "amount_24h": 2.08,
+   "volume_24h": 0.001437
+  },
+  {
+   "pair": "LTC/USDT",
+   "last": 54.43079,
+   "chg_24h": "+1.93%",
+   "high": 58.7999,
+   "low": 53.11,
+   "amount_24h": 154.93,
+   "volume_24h": 8367.26
+  },
+  {
+   "pair": "MATILDA/USDT",
+   "last": 1.22e-06,
+   "chg_24h": "+0.00%",
+   "high": 1.22e-06,
+   "low": 1.22e-06,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "MCL/USDT",
+   "last": 0.0018,
+   "chg_24h": "+0.00%",
+   "high": 0.0018,
+   "low": 0.0018,
+   "amount_24h": 6817.3,
+   "volume_24h": 12.27
+  },
+  {
+   "pair": "MMX/USDT",
+   "last": 0.0239,
+   "chg_24h": "+0.00%",
+   "high": 0.0239,
+   "low": 0.0239,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "NEXA/USDT",
+   "last": 1.3e-06,
+   "chg_24h": "-0.76%",
+   "high": 1.31e-06,
+   "low": 1.3e-06,
+   "amount_24h": 40961395.67,
+   "volume_24h": 53.49
+  },
+  {
+   "pair": "NOCK/USDC",
+   "last": 0.0287,
+   "chg_24h": "+0.00%",
+   "high": 0.0287,
+   "low": 0.0287,
+   "amount_24h": 3599.88,
+   "volume_24h": 103.32
+  },
+  {
+   "pair": "NOCK/USDT",
+   "last": 0.0384,
+   "chg_24h": "+6.96%",
+   "high": 0.0403,
+   "low": 0.0311,
+   "amount_24h": 4185980.45,
+   "volume_24h": 154058.11
+  },
+  {
+   "pair": "NOID/USDT",
+   "last": 0.007,
+   "chg_24h": "+3.00%",
+   "high": 0.007999,
+   "low": 0.0063,
+   "amount_24h": 214405.81,
+   "volume_24h": 1462.72
+  },
+  {
+   "pair": "NPT/USDT",
+   "last": 0.12,
+   "chg_24h": "-7.69%",
+   "high": 0.13,
+   "low": 0.11,
+   "amount_24h": 2802.26,
+   "volume_24h": 334.57
+  },
+  {
+   "pair": "OCTA/USDT",
+   "last": 0.09314991,
+   "chg_24h": "-22.38%",
+   "high": 0.12,
+   "low": 0.09314991,
+   "amount_24h": 5475.49,
+   "volume_24h": 513.6
+  },
+  {
+   "pair": "PLS/DAI",
+   "last": 3.99e-05,
+   "chg_24h": "+0.00%",
+   "high": 3.99e-05,
+   "low": 3.99e-05,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "PLS/USDT",
+   "last": 1.02e-05,
+   "chg_24h": "-1.73%",
+   "high": 1.038e-05,
+   "low": 1.02e-05,
+   "amount_24h": 37669032.83,
+   "volume_24h": 387.88
+  },
+  {
+   "pair": "PLSX/DAI",
+   "last": 4.39e-06,
+   "chg_24h": "+0.00%",
+   "high": 4.39e-06,
+   "low": 4.39e-06,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "PLSX/PLS",
+   "last": 0.81,
+   "chg_24h": "+0.00%",
+   "high": 0.81,
+   "low": 0.81,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "PLSX/USDT",
+   "last": 1.6e-05,
+   "chg_24h": "+0.00%",
+   "high": 1.6e-05,
+   "low": 1.6e-05,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "POL/USDT",
+   "last": 0.09848081,
+   "chg_24h": "+0.10%",
+   "high": 0.10174066,
+   "low": 0.09775935,
+   "amount_24h": 3404.05,
+   "volume_24h": 335.58
+  },
+  {
+   "pair": "PRL/BTC",
+   "last": 7e-06,
+   "chg_24h": "-4.24%",
+   "high": 8.1e-06,
+   "low": 6.59e-06,
+   "amount_24h": 9494.52,
+   "volume_24h": 0.070112
+  },
+  {
+   "pair": "PRL/USDT",
+   "last": 0.55,
+   "chg_24h": "-6.78%",
+   "high": 0.66,
+   "low": 0.55,
+   "amount_24h": 1895362.86,
+   "volume_24h": 1133794.02
+  },
+  {
+   "pair": "QMINE/QUBIC",
+   "last": 3500.0,
+   "chg_24h": "+0.00%",
+   "high": 3500.0,
+   "low": 3500.0,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "QMINE/USDT",
+   "last": 0.00209999,
+   "chg_24h": "+0.00%",
+   "high": 0.00209999,
+   "low": 0.00209999,
+   "amount_24h": 3555.08,
+   "volume_24h": 7.47
+  },
+  {
+   "pair": "QTC/USDT",
+   "last": 0.4068,
+   "chg_24h": "-0.78%",
+   "high": 0.4441,
+   "low": 0.3845,
+   "amount_24h": 28138.17,
+   "volume_24h": 11546.07
+  },
+  {
+   "pair": "QUANTUS/USDT",
+   "last": 23.869,
+   "chg_24h": "-48.46%",
+   "high": 46.325,
+   "low": 10.2,
+   "amount_24h": 1571.93,
+   "volume_24h": 47467.43
+  },
+  {
+   "pair": "QUBIC/USDT",
+   "last": 3.93e-07,
+   "chg_24h": "-1.50%",
+   "high": 4.02e-07,
+   "low": 3.62e-07,
+   "amount_24h": 98685194961.7,
+   "volume_24h": 37632.18
+  },
+  {
+   "pair": "SAFE/BTC",
+   "last": 6.9e-07,
+   "chg_24h": "+0.00%",
+   "high": 6.9e-07,
+   "low": 6.9e-07,
+   "amount_24h": 7.78,
+   "volume_24h": 5e-06
+  },
+  {
+   "pair": "SAFE/DOGE",
+   "last": 0.30521,
+   "chg_24h": "+0.00%",
+   "high": 0.30521,
+   "low": 0.30521,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "SAFE/LTC",
+   "last": 0.00087,
+   "chg_24h": "-3.33%",
+   "high": 0.0009,
+   "low": 0.00086,
+   "amount_24h": 381.41,
+   "volume_24h": 0.33
+  },
+  {
+   "pair": "SAFE/SOL",
+   "last": 0.0007,
+   "chg_24h": "+40.00%",
+   "high": 0.0007,
+   "low": 0.0005,
+   "amount_24h": 479.96,
+   "volume_24h": 0.28
+  },
+  {
+   "pair": "SAFE/USDC",
+   "last": 0.0493,
+   "chg_24h": "-3.90%",
+   "high": 0.05228,
+   "low": 0.0493,
+   "amount_24h": 253.29,
+   "volume_24h": 13.24
+  },
+  {
+   "pair": "SAT/USDT",
+   "last": 0.25,
+   "chg_24h": "+13.64%",
+   "high": 0.27,
+   "low": 0.14,
+   "amount_24h": 1089.66,
+   "volume_24h": 180.42
+  },
+  {
+   "pair": "SNOW/BTC",
+   "last": 2.3e-07,
+   "chg_24h": "+0.00%",
+   "high": 2.3e-07,
+   "low": 2.3e-07,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "SOH/USDT",
+   "last": 0.001799,
+   "chg_24h": "+0.00%",
+   "high": 0.001799,
+   "low": 0.001799,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "SOL/BTC",
+   "last": 0.001343,
+   "chg_24h": "-0.57%",
+   "high": 0.00135654,
+   "low": 0.00090001,
+   "amount_24h": 123.73,
+   "volume_24h": 0.147253
+  },
+  {
+   "pair": "SUI/USDT",
+   "last": 0.79958999,
+   "chg_24h": "+0.00%",
+   "high": 0.79958999,
+   "low": 0.79958999,
+   "amount_24h": 18.24,
+   "volume_24h": 14.58
+  },
+  {
+   "pair": "TRX/USDT",
+   "last": 0.34618,
+   "chg_24h": "+1.41%",
+   "high": 0.35001,
+   "low": 0.33302,
+   "amount_24h": 4955.62,
+   "volume_24h": 1711.22
+  },
+  {
+   "pair": "TSC/USDT",
+   "last": 1.28,
+   "chg_24h": "+15.20%",
+   "high": 1.345,
+   "low": 1.101,
+   "amount_24h": 28083.78,
+   "volume_24h": 35013.13
+  },
+  {
+   "pair": "URX/BTC",
+   "last": 9.56e-06,
+   "chg_24h": "-0.21%",
+   "high": 9.58e-06,
+   "low": 9.56e-06,
+   "amount_24h": 6.53,
+   "volume_24h": 6.2e-05
+  },
+  {
+   "pair": "USDC/USDT",
+   "last": 0.9911,
+   "chg_24h": "-0.02%",
+   "high": 1.01,
+   "low": 0.9911,
+   "amount_24h": 29858.64,
+   "volume_24h": 29789.62
+  },
+  {
+   "pair": "VRSC/BTC",
+   "last": 2.7e-06,
+   "chg_24h": "+0.37%",
+   "high": 2.76e-06,
+   "low": 2.45e-06,
+   "amount_24h": 614.55,
+   "volume_24h": 0.00166
+  },
+  {
+   "pair": "VRSC/DAI",
+   "last": 0.14501,
+   "chg_24h": "+0.00%",
+   "high": 0.14501,
+   "low": 0.14501,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "VRSC/ETH",
+   "last": 8.58e-05,
+   "chg_24h": "+0.00%",
+   "high": 8.58e-05,
+   "low": 8.58e-05,
+   "amount_24h": 11.32,
+   "volume_24h": 0.000971
+  },
+  {
+   "pair": "VRSC/KMD",
+   "last": 23.305,
+   "chg_24h": "+0.00%",
+   "high": 23.305,
+   "low": 23.305,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "VRSC/LTC",
+   "last": 0.0043,
+   "chg_24h": "+0.00%",
+   "high": 0.0043,
+   "low": 0.0043,
+   "amount_24h": 24.73,
+   "volume_24h": 0.11
+  },
+  {
+   "pair": "VRSC/SAFE",
+   "last": 10.5,
+   "chg_24h": "+0.00%",
+   "high": 10.5,
+   "low": 10.5,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "VRSC/USDC",
+   "last": 0.2299,
+   "chg_24h": "+2.17%",
+   "high": 0.2299,
+   "low": 0.19201,
+   "amount_24h": 41.59,
+   "volume_24h": 9.36
+  },
+  {
+   "pair": "VRSC/USDT",
+   "last": 0.21973,
+   "chg_24h": "+7.19%",
+   "high": 0.21973,
+   "low": 0.205,
+   "amount_24h": 552.52,
+   "volume_24h": 117.16
+  },
+  {
+   "pair": "VTC/BTC",
+   "last": 6.3e-07,
+   "chg_24h": "+0.00%",
+   "high": 6.3e-07,
+   "low": 6.3e-07,
+   "amount_24h": 22.58,
+   "volume_24h": 1.4e-05
+  },
+  {
+   "pair": "WART/USDT",
+   "last": 0.0232,
+   "chg_24h": "+17.77%",
+   "high": 0.0237,
+   "low": 0.0145,
+   "amount_24h": 8103.11,
+   "volume_24h": 143.09
+  },
+  {
+   "pair": "WPLS/PLS",
+   "last": 0.6002,
+   "chg_24h": "+0.00%",
+   "high": 0.6002,
+   "low": 0.6002,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "XBT/BTC",
+   "last": 0.0,
+   "chg_24h": "+0.00%",
+   "high": 0.0,
+   "low": 0.0,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "XBT/USDC",
+   "last": 150.0,
+   "chg_24h": "+0.00%",
+   "high": 150.0,
+   "low": 150.0,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "XBT/USDT",
+   "last": 100.0,
+   "chg_24h": "-9.10%",
+   "high": 124.0,
+   "low": 100.0,
+   "amount_24h": 1.54,
+   "volume_24h": 160.72
+  },
+  {
+   "pair": "XEL/USDT",
+   "last": 0.2311,
+   "chg_24h": "-11.12%",
+   "high": 0.27498,
+   "low": 0.23,
+   "amount_24h": 91.61,
+   "volume_24h": 24.4
+  },
+  {
+   "pair": "XMR/BTC",
+   "last": 0.00689,
+   "chg_24h": "+2.07%",
+   "high": 0.00689,
+   "low": 0.00675,
+   "amount_24h": 0.12,
+   "volume_24h": 0.000844
+  },
+  {
+   "pair": "XMR/USDT",
+   "last": 528.0,
+   "chg_24h": "+1.40%",
+   "high": 543.0,
+   "low": 506.0,
+   "amount_24h": 4.07,
+   "volume_24h": 2113.3
+  },
+  {
+   "pair": "XNT/USDT",
+   "last": 0.15,
+   "chg_24h": "-6.25%",
+   "high": 0.18,
+   "low": 0.14,
+   "amount_24h": 6695.69,
+   "volume_24h": 1045.14
+  },
+  {
+   "pair": "XPM/USDT",
+   "last": 0.0341,
+   "chg_24h": "+0.00%",
+   "high": 0.0341,
+   "low": 0.0341,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "XTM/USDT",
+   "last": 0.00167,
+   "chg_24h": "+3.73%",
+   "high": 0.00201,
+   "low": 0.0014,
+   "amount_24h": 2914143.32,
+   "volume_24h": 4975.92
+  },
+  {
+   "pair": "XTM/XMR",
+   "last": 3e-06,
+   "chg_24h": "+0.00%",
+   "high": 3e-06,
+   "low": 3e-06,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "YEC/BTC",
+   "last": 6.4e-06,
+   "chg_24h": "+0.00%",
+   "high": 6.4e-06,
+   "low": 6.4e-06,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "YEC/ETH",
+   "last": 0.00021449,
+   "chg_24h": "+0.00%",
+   "high": 0.00021449,
+   "low": 0.0002044,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "YEC/USDT",
+   "last": 0.5622,
+   "chg_24h": "-9.61%",
+   "high": 0.69999,
+   "low": 0.54512,
+   "amount_24h": 3562.48,
+   "volume_24h": 2303.83
+  },
+  {
+   "pair": "ZCL/BTC",
+   "last": 3.2e-06,
+   "chg_24h": "-8.83%",
+   "high": 5.1e-06,
+   "low": 3.2e-06,
+   "amount_24h": 79.28,
+   "volume_24h": 0.00037
+  },
+  {
+   "pair": "ZEC/BTC",
+   "last": 0.01499999,
+   "chg_24h": "+0.00%",
+   "high": 0.01499999,
+   "low": 0.01499999,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "ZEN/BTC",
+   "last": 4.2e-05,
+   "chg_24h": "+0.00%",
+   "high": 4.2e-05,
+   "low": 4.2e-05,
+   "amount_24h": 0.0,
+   "volume_24h": 0.0
+  },
+  {
+   "pair": "ZEPH/USDT",
+   "last": 0.38,
+   "chg_24h": "-6.17%",
+   "high": 0.41399998,
+   "low": 0.37537502,
+   "amount_24h": 119.11,
+   "volume_24h": 47.91
+  },
+  {
+   "pair": "ZER/BTC",
+   "last": 1.3e-07,
+   "chg_24h": "+0.00%",
+   "high": 1.3e-07,
+   "low": 1.3e-07,
+   "amount_24h": 412.97,
+   "volume_24h": 5.4e-05
+  }
+ ]
+}

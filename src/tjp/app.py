@@ -135,7 +135,8 @@ def snapshot_latest() -> dict:
     from pathlib import Path
 
     base = Path(__file__).resolve().parent.parent.parent
-    files = sorted((base / "docs" / "snapshots").glob("*.json"))
+    files = sorted((base / "docs" / "safetrade" / "snapshots").glob("*.json"))
     if not files:
         return {"ok": False, "error": "no snapshots yet"}
-    return json.loads(files[-1].read_text())
+    d = json.loads(files[-1].read_text())
+    return {"ok": True, "ts": d["ts"], "n": d["n"], "prices": {r["pair"]: r["last"] for r in d["rows"]}}
