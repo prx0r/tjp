@@ -130,8 +130,7 @@ def catalyst_list() -> list:
 
 
 @app.get("/api/snapshots/latest")
-def snapshot_latest() -> dict:
-    import json
+def snapshot_latest() -> dict:    import json
     from pathlib import Path
 
     base = Path(__file__).resolve().parent.parent.parent
@@ -140,3 +139,27 @@ def snapshot_latest() -> dict:
         return {"ok": False, "error": "no snapshots yet"}
     d = json.loads(files[-1].read_text())
     return {"ok": True, "ts": d["ts"], "n": d["n"], "prices": {r["pair"]: r["last"] for r in d["rows"]}}
+
+
+@app.get("/api/backtest/listings")
+def bt_listings() -> list:
+    import json
+    from pathlib import Path
+
+    base = Path(__file__).resolve().parent.parent.parent
+    return json.loads((base / "docs" / "safetrade" / "listings.json").read_text())
+
+
+@app.get("/api/backtest/report")
+def bt_report() -> dict:
+    from .runner import run
+
+    return run()
+
+
+@app.get("/api/backtest/history/{market}")
+def bt_history(market: str) -> dict:
+    from .history import tape_series
+
+    s = tape_series(market)
+    return {"market": market, "points": len(s), "first": s[0] if s else None, "last": s[-1] if s else None}

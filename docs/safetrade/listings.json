@@ -1,1 +1,122 @@
-[{"asset": "PRL", "name": "Pearl", "pair": "PEARL/USDT", "announced": "2026-05-20T18:18:28Z", "category": "PoUW-AI", "t0_note": "announcement; chat cited May 23 trade-live — verify executable first ask"}, {"asset": "TSC", "name": "TensorCash", "pair": null, "announced": "2026-08-17T22:02:23Z", "category": null, "t0_note": null}, {"asset": "MDS", "name": "Midstate", "pair": null, "announced": "2026-07-17T22:21:00Z", "category": null, "t0_note": null}, {"asset": "CNX", "name": "Crynux", "pair": null, "announced": "2026-07-17T22:18:15Z", "category": "decentralized-compute", "t0_note": null}, {"asset": "CSD", "name": "Compute Substrate", "pair": null, "announced": "2026-07-09T17:11:37Z", "category": "compute", "t0_note": null}, {"asset": "MDL", "name": "modelOS", "pair": null, "announced": "2026-07-07T00:39:39Z", "category": null, "t0_note": null}, {"asset": "SAT", "name": "Satori", "pair": null, "announced": "2026-07-03T18:51:58Z", "category": null, "t0_note": "relist"}, {"asset": "KRGN", "name": "Kerrigan", "pair": null, "announced": "2026-04-11T01:08:42Z", "category": null, "t0_note": null}, {"asset": "LDG", "name": "LiteDAG", "pair": null, "announced": "2026-04-09T23:53:33Z", "category": null, "t0_note": null}, {"asset": "SNAP", "name": "Snap Coin", "pair": null, "announced": "2026-02-04T19:19:08Z", "category": null, "t0_note": null}, {"asset": "CPAY", "name": "Cryptix Network", "pair": null, "announced": "2026-01-20T18:25:44Z", "category": null, "t0_note": null}, {"asset": "VE", "name": "Vecno", "pair": null, "announced": "2026-01-20T18:22:30Z", "category": null, "t0_note": null}, {"asset": "NOID", "name": "Parano1d", "pair": null, "announced": "2026-08-31T20:17:32Z", "category": null, "t0_note": null}]
+[
+ {
+  "asset": "PRL",
+  "name": "Pearl",
+  "pair": "PEARL/USDT",
+  "announced": "2026-05-20T18:18:28Z",
+  "category": "PoUW-AI",
+  "t0_note": "announcement; chat cited May 23 trade-live \u2014 verify executable first ask"
+ },
+ {
+  "asset": "TSC",
+  "name": "TensorCash",
+  "pair": null,
+  "announced": "2026-08-17T22:02:23Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "MDS",
+  "name": "Midstate",
+  "pair": null,
+  "announced": "2026-07-17T22:21:00Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "CNX",
+  "name": "Crynux",
+  "pair": null,
+  "announced": "2026-07-17T22:18:15Z",
+  "category": "decentralized-compute",
+  "t0_note": null
+ },
+ {
+  "asset": "CSD",
+  "name": "Compute Substrate",
+  "pair": null,
+  "announced": "2026-07-09T17:11:37Z",
+  "category": "compute",
+  "t0_note": null
+ },
+ {
+  "asset": "MDL",
+  "name": "modelOS",
+  "pair": null,
+  "announced": "2026-07-07T00:39:39Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "SAT",
+  "name": "Satori",
+  "pair": null,
+  "announced": "2026-07-03T18:51:58Z",
+  "category": null,
+  "t0_note": "relist"
+ },
+ {
+  "asset": "KRGN",
+  "name": "Kerrigan",
+  "pair": null,
+  "announced": "2026-04-11T01:08:42Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "LDG",
+  "name": "LiteDAG",
+  "pair": null,
+  "announced": "2026-04-09T23:53:33Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "SNAP",
+  "name": "Snap Coin",
+  "pair": null,
+  "announced": "2026-02-04T19:19:08Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "CPAY",
+  "name": "Cryptix Network",
+  "pair": null,
+  "announced": "2026-01-20T18:25:44Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "VE",
+  "name": "Vecno",
+  "pair": null,
+  "announced": "2026-01-20T18:22:30Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "NOID",
+  "name": "Parano1d",
+  "pair": null,
+  "announced": "2026-08-31T20:17:32Z",
+  "category": null,
+  "t0_note": null
+ },
+ {
+  "asset": "QUAN",
+  "name": "Quantus",
+  "pair": null,
+  "announced": "2026-09-09T22:06:00Z",
+  "category": null,
+  "t0_note": "from announcement snippet"
+ },
+ {
+  "asset": "XTM",
+  "name": "Tari",
+  "pair": "XTM/USDT",
+  "announced": null,
+  "category": "RandomX",
+  "t0_note": "article only, timestamp TBD"
+ }
+]

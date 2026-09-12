@@ -42,6 +42,7 @@ input,button{padding:8px;border-radius:8px;border:1px solid #2c3440;background:#
 <section class="card"><h2>Funnel</h2><div id="funnel"></div></section>
 <section class="card"><h2>Catalyst calendar</h2><div id="cal"></div></section>
 <section class="card"><h2>Latest snapshot</h2><div id="snap"></div></section>
+<section class="card"><h2>Backtest</h2><div id="bt"></div></section>
 </main>
 <script>
 let cur=null, curN=0;
@@ -90,7 +91,9 @@ async function extra(){
   const cal=await j('/api/catalysts');
   document.getElementById('cal').innerHTML=cal.map(c=>`<p><b>${c.date||'TBD'}</b> ${c.event} <small>→ ${c.affects.join(',')}</small></p>`).join('');
   const s=await j('/api/snapshots/latest');
-  document.getElementById('snap').innerHTML=s.ok?Object.entries(s.prices).map(([k,v])=>`<p>${k}: $${v.usd} <small>mcap $${Math.round(v.usd_market_cap/1e6)}m</small></p>`).join(''):'<p><small>no snapshot</small></p>';
+  document.getElementById('snap').innerHTML=s.ok?Object.entries(s.prices).slice(0,12).map(([k,v])=>`<p>${k}: $${v}</p>`).join('')+(s.n>12?`<p><small>+${s.n-12} more</small></p>`:''):'<p><small>no snapshot</small></p>';
+  const r=await j('/api/backtest/report');
+  document.getElementById('bt').innerHTML=`<p>${r.listings.length} listings tracked · cohort n=${r.cohort.n} <small>${r.note}</small></p>`;
 }
 extra();
 init();
