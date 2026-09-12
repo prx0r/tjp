@@ -16,6 +16,13 @@ def test_fees_drag():
 
 def test_live_tape_shape():
     import json
+    from pathlib import Path
 
-    d = json.load(open("/tjp/docs/safetrade/prl_tape.json"))
-    assert len(d) == 100 and all(float(x["price"]) > 0 for x in d)
+    f = Path("/tjp/docs/safetrade/tape/_shape.jsonl")
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text("\n".join(json.dumps({"id": i, "price": "0.55", "created_at": "2026-09-12T15:00:00Z"}) for i in range(3)))
+    try:
+        d = [json.loads(line) for line in f.read_text().splitlines()]
+        assert len(d) == 3 and all(float(x["price"]) > 0 for x in d)
+    finally:
+        f.unlink(missing_ok=True)

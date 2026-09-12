@@ -23,7 +23,19 @@ def test_falsifiers_flow():
 
 
 def test_catalysts_and_snapshot_shape():
+    import json
+    from pathlib import Path
+
     cal = c.get("/api/catalysts").json()
     assert any("2027-02-18" in x["date"] for x in cal if x["date"])
-    s = c.get("/api/snapshots/latest").json()
-    assert s["ok"] is True and "PRL/USDT" in s["prices"]
+    d = Path("/tjp/docs/safetrade/snapshots")
+    d.mkdir(parents=True, exist_ok=True)
+    f = d / "_test.json"
+    f.write_text(json.dumps({"ts": "2026-09-12T00:00:00+00:00", "n": 1,
+                             "rows": [{"pair": "PRL/USDT", "last": 0.55, "chg_24h": "+0%",
+                                       "high": 0.55, "low": 0.55, "amount_24h": 1.0, "volume_24h": 1.0}]}))
+    try:
+        s = c.get("/api/snapshots/latest").json()
+        assert s["ok"] is True and "PRL/USDT" in s["prices"]
+    finally:
+        f.unlink(missing_ok=True)

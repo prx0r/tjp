@@ -8,8 +8,18 @@ c = TestClient(app)
 
 
 def test_history_from_tape():
-    s = tape_series("prlusdt")
-    assert len(s) == 100 and s[0][0] <= s[-1][0]
+    import json
+    from pathlib import Path
+
+    f = Path("/tjp/docs/safetrade/tape/_test.jsonl")
+    f.parent.mkdir(parents=True, exist_ok=True)
+    rows = [{"id": i, "price": str(1.0 + i * 0.1), "created_at": f"2026-09-12T15:{i:02d}:00Z"} for i in range(5)]
+    f.write_text("\n".join(json.dumps(r) for r in rows))
+    try:
+        s = tape_series("_test")
+        assert len(s) == 5 and s[0][0] <= s[-1][0]
+    finally:
+        f.unlink(missing_ok=True)
 
 
 def test_runner_report_shape():
@@ -29,5 +39,14 @@ def test_survivorship_retained():
 
 
 def test_history_endpoint():
-    r = c.get("/api/backtest/history/prlusdt").json()
-    assert r["points"] == 100
+    import json
+    from pathlib import Path
+
+    f = Path("/tjp/docs/safetrade/tape/_ep.jsonl")
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps({"id": 1, "price": "0.5", "created_at": "2026-09-12T15:00:00Z"}))
+    try:
+        r = c.get("/api/backtest/history/_ep").json()
+        assert r["points"] == 1
+    finally:
+        f.unlink(missing_ok=True)
