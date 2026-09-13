@@ -9,11 +9,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 import pytest
 from tjp.ids import ProjectID, AssetID, MarketID, resolve_project, make_market_id, SAFE_ASSET_MAP
 from tjp.schema import EventType, MarketState, ExecutionQuality, ListingEvent
-from tjp.execution import market_buy, OrderLevel, ExecutionQuality as EQ, capacity_estimate
+from tjp.execution import market_buy, OrderLevel, ExecutionQuality as EQ, capacity_curve
 from tjp.buyhold import buy_hold
 from tjp.ohlcv import build_bars
 from tjp.schema import TradeRecord
-from tjp.strategy import run_strategy, _compute_sharpe
+from tjp.strategy import run_strategy, _compute_sharpe, Bar
 
 
 class TestCanonicalIDs:
@@ -69,12 +69,22 @@ class TestDepthWalkingExecution:
 
 
 class TestBuyHoldCapital:
-    def test_fee_deducted_from_size(self):
-        """$1000 + 200bps fee → investable $998, not $1000 + $2."""
-        result = buy_hold([0.1, 1.0, 2.0], entry_idx=0, size=1000, fee_bps=200)
-        # fee = 1000 * 200/10000 = $20; investable = $980; fill = 1.0 * 1.001 = ~$1.001
+    def test_buy_hold_fee_accounting(self):
+        """Flat price + 2% entry fee + slippage: net loss matches computed total."""
+        result = buy_hold([0.1, 1.0, 1.0, 1.0], entry_idx=0, size=1000, fee_bps=200, slippage_bps=10)
         assert result["entry_fee"] == 20.0
         assert result["investable"] == 980.0
+        # fill = 1.0 * 1.001 = 1.001; qty = 980/1.001 ≈ 979.02; mtm ≈ 979.02; net ≈ -20.98
+        assert result["net_mtm"] == pytest.approx(result["mtm_end"] - 1000, abs=0.01)
+        assert result["ret_mtm_pct"] == pytest.approx(result["mtm_end"] / 1000 - 1, abs=0.001)
+
+    def test_buy_hold_no_slippage_zero_fee(self):
+        """Zero fees + no slippage: flat price → exactly 0% return."""
+        result = buy_hold([0.1, 1.0, 1.0, 1.0], entry_idx=0, size=1000, fee_bps=0, slippage_bps=0)
+        assert result["entry_fee"] == 0.0
+        assert result["mtm_end"] == 1000.0
+        assert result["net_mtm"] == 0.0
+        assert result["ret_mtm_pct"] == 0.0
 
     def test_no_exit_fee_by_default(self):
         """canonical 'never sell' should not charge exit fee."""
@@ -89,10 +99,10 @@ class TestBuyHoldCapital:
 
 class TestStrategyMetrics:
     def test_sharpe_is_annualized(self):
-        """Sharpe should annualize, not be raw mean/std. For constant returns, Sharpe=0."""
+        """Sharpe should annualize, not be raw mean/std. Constant returns → None."""
         returns = [0.01] * 365
         sharpe = _compute_sharpe(returns, periods_per_year=365)
-        assert sharpe == 0.0  # constant returns have zero volatility → Sharpe=0
+        assert sharpe is None  # constant returns → undefined (zero volatility)
 
     def test_sharpe_with_volatile_returns(self):
         """Volatile returns should produce a meaningful annualized Sharpe."""
@@ -101,23 +111,22 @@ class TestStrategyMetrics:
         assert sharpe != 0.0
 
     def test_sharpe_zero_vol(self):
-        """Constant returns → Sharpe = 0 (or very large)."""
+        """Constant returns → Sharpe = None (undefined, zero volatility)."""
         sharpe = _compute_sharpe([0.0] * 100)
-        assert sharpe == 0.0
+        assert sharpe is None  # undefined for constant returns
 
     def test_strategy_accounts_for_round_trips(self):
         """Win rate should be based on completed round trips, not random bars."""
-        # Buy-sell cycle: buy at bar 1 (2.0), sell at bar 3 (1.0) → loss
-        prices = [1.0, 2.0, 1.0, 1.0]
+        bars = [
+            Bar(ts="2026-01-01T00:00:00Z", open=1.0, high=1.5, low=0.8, close=1.0),
+            Bar(ts="2026-01-02T00:00:00Z", open=2.0, high=2.2, low=1.5, close=2.0),
+            Bar(ts="2026-01-03T00:00:00Z", open=1.0, high=1.2, low=0.8, close=1.0),
+            Bar(ts="2026-01-04T00:00:00Z", open=1.0, high=1.1, low=0.9, close=1.0),
+        ]
         signals = [1, 1, 0, 0]
-        result = run_strategy(prices, signals, fee_bps=0)
+        result = run_strategy(bars, signals, fee_bps=0)
         assert result["closed_trades"] == 1
-        # Trade return = (2.0/1.0 * 1.0/2.0) - 1 = 0.0? No: (2.0/1.0 * 1.0/2.0) = 1.0
-        # Actually returns are computed bar-by-bar, so trade_ret = product of daily returns
-        # Bar 1→2: return = 2.0/1.0 - 1 = 1.0 → equity 1.0→2.0
-        # Bar 2→3: return = 1.0/2.0 - 1 = -0.5 → equity 2.0→1.0
-        # Trade return = (1+1.0)*(1-0.5) - 1 = -0.5
-        assert result["trades"][0]["return"] == pytest.approx(-0.5)
+        assert result["trades"][0]["net_pnl"] == pytest.approx(-0.5)
 
 
 class TestOHLCV:
@@ -129,8 +138,10 @@ class TestOHLCV:
         )
         bars = build_bars([trade], bar_seconds=60)
         assert len(bars) == 1
-        assert bars[0].trade_count == 1
-        assert bars[0].base_volume == 100
+        assert bars[0].bar.trade_count == 1
+        assert bars[0].bar.base_volume == 100
+        assert not bars[0].is_missing
+        assert bars[0].mark_delay_seconds is not None
 
     def test_missing_bars_not_forward_filled(self):
         """Gaps in time should produce separate bars, not one continuous series."""

@@ -1,10 +1,10 @@
-"""Cohort builder — uses canonical IDs, not ticker prefix matching."""
+"""Cohort builder — uses canonical IDs from ids.py only. No duplicate maps."""
 from __future__ import annotations
 import json
 from pathlib import Path
+from .ids import SAFE_ASSET_MAP
 
 BASE = Path(__file__).resolve().parent.parent.parent / "docs" / "safetrade"
-SIZE = 1000.0
 
 
 def cohort(universe: list = None, listings: list = None) -> dict:
@@ -12,24 +12,14 @@ def cohort(universe: list = None, listings: list = None) -> dict:
     ls = listings if listings is not None else json.load(open(BASE / "listings.json"))
     uni = {m["id"].lower(): m for m in uni_raw}
 
-    # Canonical asset → project mapping (no prefix matching)
-    CANONICAL = {
-        "QUAN": "quantus", "QUANTUS": "quantus",
-        "PRL": "pearl", "PEARL": "pearl",
-        "TSC": "tensorcash", "NOID": "paranoid", "CNX": "crynux",
-        "MDL": "modelos", "CSD": "computesubstrate",
-    }
-
     rows = []
     for l in ls:
         asset = l["asset"]
-        project = CANONICAL.get(asset.upper(), asset.lower())
-        # Look up by both old and new market IDs
+        project = SAFE_ASSET_MAP.get(asset.upper(), asset.lower())
         old_id = asset.lower() + "usdt"
         new_id = project + "usdt"
         m = uni.get(old_id) or uni.get(new_id) or {}
         state = m.get("state") if m else None
-        # Lifecycle events, not death booleans
         lifecycle = "ACTIVE" if state == "enabled" else "DISABLED" if state else "UNKNOWN"
         rows.append({
             "project": project,

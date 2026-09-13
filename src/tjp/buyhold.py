@@ -28,8 +28,8 @@ def buy_hold(prices: list, entry_idx: int = 0, size: float = 1000.0,
     equity = [round(qty * p, 2) for p in prices[entry_idx + 1:]]
     mtm_end = equity[-1] if equity else investable
 
-    gross_mtm = mtm_end - size  # profit/loss vs original $1000
-    gross_liq = mtm_end - size  # same as MTM for buy-and-hold
+    gross_mtm = mtm_end - size
+    gross_liq = mtm_end - size
 
     exit_fee = mtm_end * fee_bps / 10_000 if charge_exit_fee else 0.0
 
@@ -43,10 +43,10 @@ def buy_hold(prices: list, entry_idx: int = 0, size: float = 1000.0,
         "mtm_end": round(mtm_end, 2),
         "exit_fee": round(exit_fee, 2),
         "gross_mtm": round(gross_mtm, 2),
-        "net_mtm": round(mtm_end - entry_fee - size, 2),
+        "net_mtm": round(mtm_end - size, 2),  # fee already reflected in qty
         "gross_liq": round(mtm_end - exit_fee - size, 2),
-        "net_liq": round(mtm_end - exit_fee - entry_fee - size, 2),
-        "ret_mtm_pct": round((mtm_end - entry_fee - size) / size * 100, 2),
-        "ret_liq_pct": round((mtm_end - exit_fee - entry_fee - size) / size * 100, 2),
-        "execution_quality": "TRADE_PROXY",  # placeholder; real impl needs order book
+        "net_liq": round(mtm_end - exit_fee - size, 2),
+        "ret_mtm_pct": round(mtm_end / size - 1, 2),
+        "ret_liq_pct": round((mtm_end - exit_fee) / size - 1, 2),
+        "execution_quality": "TRADE_PROXY",
     }
