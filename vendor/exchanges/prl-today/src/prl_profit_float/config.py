@@ -1,0 +1,455 @@
+from __future__ import annotations
+
+import copy
+import json
+import re
+import sys
+from pathlib import Path
+from typing import Any
+
+
+MINER_ADDRESS_RE = re.compile(r"^prl1[0-9a-z]{20,120}$")
+
+if getattr(sys, "frozen", False):
+    PROJECT_ROOT = Path(sys.executable).resolve().parent
+    BUNDLE_ROOT = Path(getattr(sys, "_MEIPASS", PROJECT_ROOT))
+else:
+    PROJECT_ROOT = Path(__file__).resolve().parents[2]
+    BUNDLE_ROOT = PROJECT_ROOT
+CONFIG_PATH = PROJECT_ROOT / "config.json"
+EXAMPLE_CONFIG_PATH = PROJECT_ROOT / "config.example.json"
+BUNDLED_EXAMPLE_CONFIG_PATH = BUNDLE_ROOT / "config.example.json"
+
+
+POOL_PRESET_OVERRIDES: dict[str, dict[str, Any]] = {
+    "AlphaPool PRL": {"default_fee_percent": 0.0, "ignore_api_fee": True},
+    "Pearlhash": {"default_fee_percent": 0.0},
+    "akoya": {"payout_scheme": "PPLNS-N"},
+    "NushyPool FPPS": {
+        "base_url": "https://nushypool.com/prl/pool",
+        "default_fee_percent": 1.0,
+        "payout_scheme": "FPPS",
+    },
+    "NushyPool SOLO": {"base_url": "https://nushypool.com/prl_solo/pool"},
+}
+
+LEGACY_POOL_NAMES = {"NushyPool PPS": "NushyPool FPPS"}
+
+
+DEFAULT_CONFIG: dict[str, Any] = {
+    "miner_address": "prl1p2ka5l06wmq73kdsqec9k7fsv00jt76nfhk56e9nh82fn07qjualspfsxyp",
+    "selected_pool": "AlphaPool PRL",
+    "pools": [
+        {
+            "name": "AlphaPool PRL",
+            "hashrate_name": "AlphaPool",
+            "base_url": "https://pearl.alphapool.tech",
+            "stats_path": "/api/stats",
+            "miner_path_template": "/api/miner/{address}",
+            "api_enabled": True,
+            "default_fee_percent": 0.0,
+            "ignore_api_fee": True,
+            "default_payout_min_prl": 1.0,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "1.6 Eh/s",
+            "hashrate_no_share_percent": 5.8,
+        },
+        {
+            "name": "Kryptex",
+            "base_url": "https://pool.kryptex.com/prl",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "PROP",
+            "hashrate_no_hashrate": "3.2 Eh/s",
+            "hashrate_no_share_percent": 12.0,
+        },
+        {
+            "name": "Pearlhash",
+            "base_url": "https://pearlhash.xyz",
+            "api_enabled": False,
+            "default_fee_percent": 0.0,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "5.6 Eh/s",
+            "hashrate_no_share_percent": 21.0,
+        },
+        {
+            "name": "Luckypool",
+            "base_url": "https://pearl.luckypool.io",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "3.7 Eh/s",
+            "hashrate_no_share_percent": 13.7,
+        },
+        {
+            "name": "JETSKI",
+            "base_url": "https://pearl.jetskipool.ai",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "PROP",
+            "hashrate_no_hashrate": "182.7 Ph/s",
+            "hashrate_no_share_percent": 0.7,
+        },
+        {
+            "name": "BaikalMine",
+            "base_url": "https://baikalmine.com/pools/pplns/pearl/dashboard",
+            "api_enabled": False,
+            "default_fee_percent": 0.5,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "198.0 Ph/s",
+            "hashrate_no_share_percent": 0.7,
+        },
+        {
+            "name": "akoya",
+            "base_url": "https://akoyapool.com",
+            "api_enabled": False,
+            "default_fee_percent": 2.0,
+            "payout_scheme": "PPLNS-N",
+            "hashrate_no_hashrate": "149.0 Ph/s",
+            "hashrate_no_share_percent": 0.6,
+        },
+        {
+            "name": "Himpool SOLO",
+            "hashrate_name": "Himpool",
+            "base_url": "https://himpool.com/pools/prl",
+            "api_enabled": False,
+            "default_fee_percent": 2.0,
+            "payout_scheme": "SOLO",
+            "hashrate_no_hashrate": "7.8 Ph/s",
+            "hashrate_no_share_percent": 0.0,
+        },
+        {
+            "name": "Himpool PPLNS",
+            "hashrate_name": "Himpool",
+            "base_url": "https://himpool.com/pools/prl",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "1.1 Ph/s",
+            "hashrate_no_share_percent": 0.0,
+        },
+        {
+            "name": "NushyPool FPPS",
+            "hashrate_name": "NushyPool",
+            "base_url": "https://nushypool.com/prl/pool",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "FPPS",
+            "hashrate_no_hashrate": "385.9 Th/s",
+            "hashrate_no_share_percent": 0.0,
+        },
+        {
+            "name": "NushyPool SOLO",
+            "hashrate_name": "NushyPool",
+            "base_url": "https://nushypool.com/prl_solo/pool",
+            "api_enabled": False,
+            "default_fee_percent": 1.0,
+            "payout_scheme": "SOLO",
+            "hashrate_no_hashrate": "N/A",
+        },
+        {
+            "name": "Mineprl",
+            "base_url": "https://mineprl.com",
+            "api_enabled": False,
+            "default_fee_percent": 4.4,
+            "payout_scheme": "PPLNS",
+            "hashrate_no_hashrate": "5.8 Ph/s",
+            "hashrate_no_share_percent": 0.0,
+        },
+        {
+            "name": "HeroMiners",
+            "base_url": "https://pearl.herominers.com",
+            "api_enabled": False,
+            "default_fee_percent": 0.0,
+            "payout_scheme": "PROP",
+            "hashrate_no_hashrate": "761.0 Mh/s",
+            "hashrate_no_share_percent": 0.0,
+        },
+    ],
+    "selected_mining_software": "AlphaMiner",
+    "mining_software": [
+        {
+            "name": "AlphaMiner",
+            "algorithm": "pearl",
+            "dev_fee_percent": 0.0,
+            "nvidia": True,
+            "amd": False,
+            "intel": False,
+            "cpu": False,
+            "source_url": "https://github.com/AlphaMine-Tech/alpha-miner/releases/latest",
+        },
+        {
+            "name": "lpminer",
+            "algorithm": "pearlhash",
+            "dev_fee_percent": 0.0,
+            "nvidia": True,
+            "amd": False,
+            "intel": False,
+            "cpu": False,
+            "source_url": "https://miner.download/en/lpminer",
+        },
+        {
+            "name": "BzMiner",
+            "algorithm": "pearl",
+            "dev_fee_percent": 2.0,
+            "nvidia": False,
+            "amd": False,
+            "intel": False,
+            "cpu": True,
+            "source_url": "https://github.com/bzminer/bzminer/releases",
+        },
+        {
+            "name": "SRBMiner",
+            "algorithm": "pearlhash",
+            "dev_fee_percent": 3.0,
+            "nvidia": True,
+            "amd": False,
+            "intel": False,
+            "cpu": False,
+            "source_url": "https://github.com/doktor83/SRBMiner-Multi/blob/master/Readme",
+        },
+    ],
+    "selected_market_source": "SafeTrade",
+    "market_sources": [
+        {
+            "name": "PRLScan",
+            "kind": "prlscan",
+            "url": "https://api.prlscan.com/v1/market/prl",
+        },
+        {
+            "name": "SafeTrade",
+            "kind": "safetrade",
+            "market_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+            "api_urls": [
+                "https://safetrade.com/api/v2/trade/public/tickers/prlusdt",
+                "https://safetrade.com/api/v2/trade/public/tickers/prl-usdt",
+                "https://safetrade.com/api/v2/peatio/public/markets/prlusdt/tickers",
+                "https://safetrade.com/api/v2/peatio/public/tickers/prlusdt",
+            ],
+        },
+        {
+            "name": "SafeTrade mirror",
+            "kind": "safetrade",
+            "market_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+            "api_urls": [
+                "https://safe.trade/api/v2/trade/public/tickers/prlusdt",
+                "https://safe.trade/api/v2/trade/public/tickers/prl-usdt",
+                "https://safe.trade/api/v2/peatio/public/markets/prlusdt/tickers",
+                "https://safe.trade/api/v2/peatio/public/tickers/prlusdt",
+            ],
+        },
+    ],
+    "market_url": "https://safetrade.com/api/v2/trade/public/tickers/prlusdt",
+    "chain_summary_url": "https://api.prlscan.com/v1/analytics/summary",
+    "fx_url": "https://open.er-api.com/v6/latest/USD",
+    "exchange_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+    "hashrate_info_url": "https://hashrate.no/coins/PRL/",
+    "repository_url": "https://github.com/stlin256/prl-today",
+    "proxy": {
+        "enabled": False,
+        "use_env": True,
+        "url": "",
+    },
+    "startup": {
+        "enabled": False,
+    },
+    "calculation": {
+        "fee_mode": "auto",
+        "fee_override_percent": 3.0,
+        "tool_fee_mode": "auto",
+        "tool_fee_percent": 0.0,
+        "price_mode": "auto",
+        "manual_price_usd": 0.52,
+        "fx_mode": "auto",
+        "manual_usd_cny": 6.78,
+        "hashrate_mode": "fit",
+    },
+    "refresh": {
+        "miner_seconds": 30,
+        "pool_seconds": 30,
+        "market_seconds": 30,
+        "chain_seconds": 60,
+        "fx_seconds": 3600,
+        "ui_tick_seconds": 1,
+    },
+    "refresh_seconds": 30,
+    "display": {
+        "level": "standard",
+        "currency": "auto",
+        "ui_scale": "auto",
+        "configured": False,
+    },
+    "window": {
+        "x": 80,
+        "y": 80,
+        "width": 246,
+        "height": 106,
+        "alpha": 0.96,
+        "compact": False,
+    },
+}
+
+
+def deep_merge(default: dict[str, Any], override: dict[str, Any]) -> dict[str, Any]:
+    result = copy.deepcopy(default)
+    for key, value in override.items():
+        if isinstance(value, dict) and isinstance(result.get(key), dict):
+            result[key] = deep_merge(result[key], value)
+        elif key in {"pools", "mining_software", "market_sources"} and isinstance(value, list) and isinstance(result.get(key), list):
+            result[key] = merge_named_list(result[key], value)
+        else:
+            result[key] = value
+    return result
+
+
+def merge_named_list(default: list[Any], override: list[Any]) -> list[Any]:
+    if not all(isinstance(item, dict) and "name" in item for item in [*default, *override]):
+        return copy.deepcopy(override)
+    merged = {str(item["name"]): copy.deepcopy(item) for item in default}
+    order = [str(item["name"]) for item in default]
+    for item in override:
+        name = str(item["name"])
+        if name in merged:
+            merged[name] = deep_merge(merged[name], item)
+        else:
+            order.append(name)
+            merged[name] = copy.deepcopy(item)
+    return [merged[name] for name in order]
+
+
+def normalize_builtin_pool_presets(config: dict[str, Any]) -> dict[str, Any]:
+    pools = config.get("pools")
+    if not isinstance(pools, list):
+        return config
+
+    selected = config.get("selected_pool")
+    if selected in LEGACY_POOL_NAMES:
+        config["selected_pool"] = LEGACY_POOL_NAMES[str(selected)]
+
+    normalized: list[Any] = []
+    by_name: dict[str, dict[str, Any]] = {}
+    for item in pools:
+        if not isinstance(item, dict):
+            normalized.append(item)
+            continue
+
+        pool = copy.deepcopy(item)
+        name = str(pool.get("name", ""))
+        if name in LEGACY_POOL_NAMES:
+            name = LEGACY_POOL_NAMES[name]
+            pool["name"] = name
+
+        overrides = POOL_PRESET_OVERRIDES.get(name)
+        if overrides:
+            pool.update(copy.deepcopy(overrides))
+
+        if not name:
+            normalized.append(pool)
+            continue
+
+        existing = by_name.get(name)
+        if existing is None:
+            by_name[name] = pool
+            normalized.append(pool)
+        else:
+            existing.update(pool)
+            overrides = POOL_PRESET_OVERRIDES.get(name)
+            if overrides:
+                existing.update(copy.deepcopy(overrides))
+
+    config["pools"] = normalized
+    return config
+
+
+def load_config(path: Path = CONFIG_PATH) -> dict[str, Any]:
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            return normalize_builtin_pool_presets(deep_merge(DEFAULT_CONFIG, json.load(f)))
+
+    example_path = EXAMPLE_CONFIG_PATH if EXAMPLE_CONFIG_PATH.exists() else BUNDLED_EXAMPLE_CONFIG_PATH
+    if example_path.exists():
+        with example_path.open("r", encoding="utf-8") as f:
+            config = deep_merge(DEFAULT_CONFIG, json.load(f))
+    else:
+        config = copy.deepcopy(DEFAULT_CONFIG)
+    normalize_builtin_pool_presets(config)
+    save_config(config, path)
+    return config
+
+
+def save_config(config: dict[str, Any], path: Path = CONFIG_PATH) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(config, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
+def miner_address_error(value: Any) -> str | None:
+    address = str(value or "").strip()
+    if not address:
+        return "Wallet is required"
+    if not MINER_ADDRESS_RE.fullmatch(address):
+        return "Wallet must be a lowercase PRL address starting with prl1"
+    return None
+
+
+def selected_pool(config: dict[str, Any]) -> dict[str, Any]:
+    name = config.get("selected_pool")
+    pools = config.get("pools") or []
+    for pool in pools:
+        if pool.get("name") == name:
+            return pool
+    if pools:
+        return pools[0]
+    return DEFAULT_CONFIG["pools"][0]
+
+
+def pool_names(config: dict[str, Any]) -> list[str]:
+    return [str(pool.get("name", "Unnamed Pool")) for pool in config.get("pools", [])]
+
+
+def selected_mining_software(config: dict[str, Any]) -> dict[str, Any]:
+    name = config.get("selected_mining_software")
+    software = config.get("mining_software") or []
+    for item in software:
+        if item.get("name") == name:
+            return item
+    if software:
+        return software[0]
+    return DEFAULT_CONFIG["mining_software"][0]
+
+
+def mining_software_names(config: dict[str, Any]) -> list[str]:
+    return [str(item.get("name", "Unnamed Miner")) for item in config.get("mining_software", [])]
+
+
+def selected_market_source(config: dict[str, Any]) -> dict[str, Any]:
+    name = config.get("selected_market_source")
+    sources = config.get("market_sources") or []
+    for source in sources:
+        if source.get("name") == name:
+            return source
+    if sources:
+        return sources[0]
+    return {
+        "name": "PRLScan",
+        "kind": "prlscan",
+        "url": str(config.get("market_url", DEFAULT_CONFIG["market_url"])),
+    }
+
+
+def market_source_names(config: dict[str, Any]) -> list[str]:
+    return [str(source.get("name", "Unnamed Source")) for source in config.get("market_sources", [])]
+
+
+def refresh_seconds(config: dict[str, Any], key: str) -> int:
+    refresh = config.get("refresh") or {}
+    legacy = int(config.get("refresh_seconds") or DEFAULT_CONFIG["refresh_seconds"])
+    default = int((DEFAULT_CONFIG["refresh"] or {}).get(key, legacy))
+    try:
+        value = int(float(refresh.get(key, default)))
+    except (TypeError, ValueError):
+        value = default
+    if key == "ui_tick_seconds":
+        return max(value, 1)
+    return max(value, 5)

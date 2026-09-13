@@ -1,0 +1,252 @@
+{
+  "miner_address": "prl1p2ka5l06wmq73kdsqec9k7fsv00jt76nfhk56e9nh82fn07qjualspfsxyp",
+  "selected_pool": "AlphaPool PRL",
+  "pools": [
+    {
+      "name": "AlphaPool PRL",
+      "hashrate_name": "AlphaPool",
+      "base_url": "https://pearl.alphapool.tech",
+      "stats_path": "/api/stats",
+      "miner_path_template": "/api/miner/{address}",
+      "api_enabled": true,
+      "default_fee_percent": 0.0,
+      "ignore_api_fee": true,
+      "default_payout_min_prl": 1.0,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "1.6 Eh/s",
+      "hashrate_no_share_percent": 5.8
+    },
+    {
+      "name": "Kryptex",
+      "base_url": "https://pool.kryptex.com/prl",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "PROP",
+      "hashrate_no_hashrate": "3.2 Eh/s",
+      "hashrate_no_share_percent": 12.0
+    },
+    {
+      "name": "Pearlhash",
+      "base_url": "https://pearlhash.xyz",
+      "api_enabled": false,
+      "default_fee_percent": 0.0,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "5.6 Eh/s",
+      "hashrate_no_share_percent": 21.0
+    },
+    {
+      "name": "Luckypool",
+      "base_url": "https://pearl.luckypool.io",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "3.7 Eh/s",
+      "hashrate_no_share_percent": 13.7
+    },
+    {
+      "name": "JETSKI",
+      "base_url": "https://pearl.jetskipool.ai",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "PROP",
+      "hashrate_no_hashrate": "182.7 Ph/s",
+      "hashrate_no_share_percent": 0.7
+    },
+    {
+      "name": "BaikalMine",
+      "base_url": "https://baikalmine.com/pools/pplns/pearl/dashboard",
+      "api_enabled": false,
+      "default_fee_percent": 0.5,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "198.0 Ph/s",
+      "hashrate_no_share_percent": 0.7
+    },
+    {
+      "name": "akoya",
+      "base_url": "https://akoyapool.com",
+      "api_enabled": false,
+      "default_fee_percent": 2.0,
+      "payout_scheme": "PPLNS-N",
+      "hashrate_no_hashrate": "149.0 Ph/s",
+      "hashrate_no_share_percent": 0.6
+    },
+    {
+      "name": "Himpool SOLO",
+      "hashrate_name": "Himpool",
+      "base_url": "https://himpool.com/pools/prl",
+      "api_enabled": false,
+      "default_fee_percent": 2.0,
+      "payout_scheme": "SOLO",
+      "hashrate_no_hashrate": "7.8 Ph/s",
+      "hashrate_no_share_percent": 0.0
+    },
+    {
+      "name": "Himpool PPLNS",
+      "hashrate_name": "Himpool",
+      "base_url": "https://himpool.com/pools/prl",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "1.1 Ph/s",
+      "hashrate_no_share_percent": 0.0
+    },
+    {
+      "name": "NushyPool FPPS",
+      "hashrate_name": "NushyPool",
+      "base_url": "https://nushypool.com/prl/pool",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "FPPS",
+      "hashrate_no_hashrate": "385.9 Th/s",
+      "hashrate_no_share_percent": 0.0
+    },
+    {
+      "name": "NushyPool SOLO",
+      "hashrate_name": "NushyPool",
+      "base_url": "https://nushypool.com/prl_solo/pool",
+      "api_enabled": false,
+      "default_fee_percent": 1.0,
+      "payout_scheme": "SOLO",
+      "hashrate_no_hashrate": "N/A"
+    },
+    {
+      "name": "Mineprl",
+      "base_url": "https://mineprl.com",
+      "api_enabled": false,
+      "default_fee_percent": 4.4,
+      "payout_scheme": "PPLNS",
+      "hashrate_no_hashrate": "5.8 Ph/s",
+      "hashrate_no_share_percent": 0.0
+    },
+    {
+      "name": "HeroMiners",
+      "base_url": "https://pearl.herominers.com",
+      "api_enabled": false,
+      "default_fee_percent": 0.0,
+      "payout_scheme": "PROP",
+      "hashrate_no_hashrate": "761.0 Mh/s",
+      "hashrate_no_share_percent": 0.0
+    }
+  ],
+  "selected_mining_software": "AlphaMiner",
+  "mining_software": [
+    {
+      "name": "AlphaMiner",
+      "algorithm": "pearl",
+      "dev_fee_percent": 0.0,
+      "nvidia": true,
+      "amd": false,
+      "intel": false,
+      "cpu": false,
+      "source_url": "https://github.com/AlphaMine-Tech/alpha-miner/releases/latest"
+    },
+    {
+      "name": "lpminer",
+      "algorithm": "pearlhash",
+      "dev_fee_percent": 0.0,
+      "nvidia": true,
+      "amd": false,
+      "intel": false,
+      "cpu": false,
+      "source_url": "https://miner.download/en/lpminer"
+    },
+    {
+      "name": "BzMiner",
+      "algorithm": "pearl",
+      "dev_fee_percent": 2.0,
+      "nvidia": false,
+      "amd": false,
+      "intel": false,
+      "cpu": true,
+      "source_url": "https://github.com/bzminer/bzminer/releases"
+    },
+    {
+      "name": "SRBMiner",
+      "algorithm": "pearlhash",
+      "dev_fee_percent": 3.0,
+      "nvidia": true,
+      "amd": false,
+      "intel": false,
+      "cpu": false,
+      "source_url": "https://github.com/doktor83/SRBMiner-Multi/blob/master/Readme"
+    }
+  ],
+  "selected_market_source": "SafeTrade",
+  "market_sources": [
+    {
+      "name": "PRLScan",
+      "kind": "prlscan",
+      "url": "https://api.prlscan.com/v1/market/prl"
+    },
+    {
+      "name": "SafeTrade",
+      "kind": "safetrade",
+      "market_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+      "api_urls": [
+        "https://safetrade.com/api/v2/trade/public/tickers/prlusdt",
+        "https://safetrade.com/api/v2/trade/public/tickers/prl-usdt",
+        "https://safetrade.com/api/v2/peatio/public/markets/prlusdt/tickers",
+        "https://safetrade.com/api/v2/peatio/public/tickers/prlusdt"
+      ]
+    },
+    {
+      "name": "SafeTrade mirror",
+      "kind": "safetrade",
+      "market_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+      "api_urls": [
+        "https://safe.trade/api/v2/trade/public/tickers/prlusdt",
+        "https://safe.trade/api/v2/trade/public/tickers/prl-usdt",
+        "https://safe.trade/api/v2/peatio/public/markets/prlusdt/tickers",
+        "https://safe.trade/api/v2/peatio/public/tickers/prlusdt"
+      ]
+    }
+  ],
+  "market_url": "https://safetrade.com/api/v2/trade/public/tickers/prlusdt",
+  "chain_summary_url": "https://api.prlscan.com/v1/analytics/summary",
+  "fx_url": "https://open.er-api.com/v6/latest/USD",
+  "exchange_url": "https://safetrade.com/exchange/PRL-USDT?type=basic",
+  "hashrate_info_url": "https://hashrate.no/coins/PRL/",
+  "repository_url": "https://github.com/stlin256/prl-today",
+  "proxy": {
+    "enabled": false,
+    "use_env": true,
+    "url": ""
+  },
+  "startup": {
+    "enabled": false
+  },
+  "calculation": {
+    "fee_mode": "auto",
+    "fee_override_percent": 3.0,
+    "tool_fee_mode": "auto",
+    "tool_fee_percent": 0.0,
+    "price_mode": "auto",
+    "manual_price_usd": 0.52,
+    "fx_mode": "auto",
+    "manual_usd_cny": 6.78,
+    "hashrate_mode": "fit"
+  },
+  "refresh": {
+    "miner_seconds": 30,
+    "pool_seconds": 30,
+    "market_seconds": 30,
+    "chain_seconds": 60,
+    "fx_seconds": 3600,
+    "ui_tick_seconds": 1
+  },
+  "refresh_seconds": 30,
+  "display": {
+    "level": "standard",
+    "currency": "auto",
+    "ui_scale": "auto",
+    "configured": false
+  },
+  "window": {
+    "x": 80,
+    "y": 80,
+    "width": 246,
+    "height": 106,
+    "alpha": 0.96,
+    "compact": false
+  }
+}
